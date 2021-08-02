@@ -1,0 +1,138 @@
+.header {
+  &__top {
+    padding: 8px 0;
+    background-color: $blue;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    a {
+      color: #fff;
+    }
+  }
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__center {
+    padding: 15px 0 7px;
+  }
+  &__bottom {
+    border-top: 1px solid #CDCDCD;
+    border-bottom: 1px solid #CDCDCD;
+  }
+  &__location {
+    display: flex;
+    align-items: center;
+    svg {
+      width: 16px;
+      margin-right: 5px;
+      transition: 0.2s;
+      fill: #fff
+    }
+    &:hover {
+      color: $red;
+    }
+  }
+  &__location-span {
+    text-decoration: underline;
+    margin-left: 5px;
+  }
+  &__user {
+      display: flex;
+      border-bottom: 1px solid #fff;
+    li {
+      &:not(:last-child) {
+        padding-right: 8px;
+        margin-right: 8px;
+        position: relative;
+        &:after {
+          content: '';
+          display: block;
+          width: 1px;
+          height: 100%;
+          background-color: #fff;
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+      }
+    }
+    a {
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+  &__logo {
+    max-width: 250px;
+    max-height: 100px;
+    position: relative;
+    z-index: 11;
+    img {
+      max-height: 100%;
+    }
+  }
+  &__hamburger {
+    display: none;
+    position: relative;
+    z-index: 11;
+  }
+  @media (max-width: $break_sm) {
+    &__top {
+      display: none;
+    }
+    &__hamburger {
+      display: block;
+    }
+    &__bottom {
+      padding: 0;
+      border: none;
+    }
+    .hamburger {
+      padding-right: 0;
+      &.is-active {
+        .hamburger-inner {
+          width: 20px;
+        }
+      }
+    }
+    .hamburger-inner {
+      width: 15px;
+    }
+    .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+      right: 0;
+    }
+    &__center {
+      padding: 10px 0;
+    }
+    &__logo {
+      max-width: 150px;
+      max-height: 50px;
+    }
+    .connect {
+      margin-bottom: 20px;
+    }
+    &__location {
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 20px;
+      color: $blue;
+      svg {
+        fill: $blue;
+      }
+    }
+    &__user {
+      flex-wrap: wrap;
+      font-size: 14px;
+      font-weight: 500;
+      li {
+        width: 100%;
+        margin-bottom: 8px;
+      }
+      a {
+        color: $blue;
+      }
+    }
+  }
+}

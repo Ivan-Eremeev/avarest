@@ -1,0 +1,31 @@
+.banner {
+  padding: 80px 0;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-image: url(../img/);
+  background-color: #ccc;
+  background-size: cover;
+  &__content {
+    max-width: 970px;
+    margin-left: auto;
+  }
+  &__title {
+    font-size: 44px;
+    margin-bottom: 5px;
+  }
+  &__text {
+    font-size: 20px;
+  }
+  @media (max-width: $break_sm) {
+    &__content {
+      max-width: 500px;
+      margin-left: 0;
+    }
+    &__title {
+      font-size: 28px;
+    }
+    &__text {
+      font-size: 18px;
+    }
+  }
+}

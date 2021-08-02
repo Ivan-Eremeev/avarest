@@ -1,0 +1,95 @@
+// header
+header.header
+	.header__top 
+		.wrapper
+			a(href="#").header__location
+				<svg id="Layer_1" enable-background="new 0 0 512 512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><g><path d="m407.579 87.677c-31.073-53.624-86.265-86.385-147.64-87.637-2.62-.054-5.257-.054-7.878 0-61.374 1.252-116.566 34.013-147.64 87.637-31.762 54.812-32.631 120.652-2.325 176.123l126.963 232.387c.057.103.114.206.173.308 5.586 9.709 15.593 15.505 26.77 15.505 11.176 0 21.183-5.797 26.768-15.505.059-.102.116-.205.173-.308l126.963-232.387c30.304-55.471 29.435-121.311-2.327-176.123zm-151.579 144.323c-39.701 0-72-32.299-72-72s32.299-72 72-72 72 32.299 72 72-32.298 72-72 72z"/></g></svg>
+				span Ваш город - Москва
+				span.header__location-span (изменить)
+			ul.header__user 
+				li
+					a(href="#") Регистрация 
+				li
+					a(href="#") Личный кабинет 
+	.header__center
+		.wrapper
+			a(href="#").header__logo 
+				img(src="img/logo.png", alt="")
+			// connect
+			.connect.mobile-hide
+				.connect__row
+					a(href="tel:+78005519588").connect__tel.connect__tel--big +7 (800) 551 95 88
+				.connect__row.connect__row--flex
+					a(href="tel:+79206629630").connect__tel.connect__tel--small +7 920-662-96-30
+					.connect__social 
+						a(href="#").connect__icon.connect__icon--whatsapp
+							img(src="img/whatsapp.svg", alt="")
+						a(href="#").connect__icon.connect__icon--telegram
+							img(src="img/telegram.svg", alt="")
+						a(href="#").connect__icon.connect__icon--viber
+							img(src="img/viber.svg", alt="")
+			//	/connect
+			.header__hamburger.hamburger.hamburger--squeeze.js-drop-btn(data-drop="menu")
+				.hamburger-box
+					.hamburger-inner
+	.header__bottom
+		.wrapper
+
+			// menu
+			//- .menu--left .menu--right
+			.js-drop#menu.menu.menu--left
+				nav.menu__nav
+					// search
+					.search.mobile-visible
+						input#search.search__input(type="text")
+						label.search__label(for="search") 
+							<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-1 0 136 136.21852">
+								<path d="M 93.148438 80.832031 C 109.5 57.742188 104.03125 25.769531 80.941406 9.421875 C 57.851562 -6.925781 25.878906 -1.460938 9.53125 21.632812 C -6.816406 44.722656 -1.351562 76.691406 21.742188 93.039062 C 38.222656 104.707031 60.011719 105.605469 77.394531 95.339844 L 115.164062 132.882812 C 119.242188 137.175781 126.027344 137.347656 130.320312 133.269531 C 134.613281 129.195312 134.785156 122.410156 130.710938 118.117188 C 130.582031 117.980469 130.457031 117.855469 130.320312 117.726562 Z M 51.308594 84.332031 C 33.0625 84.335938 18.269531 69.554688 18.257812 51.308594 C 18.253906 33.0625 33.035156 18.269531 51.285156 18.261719 C 69.507812 18.253906 84.292969 33.011719 84.328125 51.234375 C 84.359375 69.484375 69.585938 84.300781 51.332031 84.332031 C 51.324219 84.332031 51.320312 84.332031 51.308594 84.332031 Z M 51.308594 84.332031"/>
+							</svg>
+					//	/search
+					ul.menu__list
+						li
+							a(href="#") Главная
+						li
+							a(href="#") Каталог проектов
+						li
+							a(href="#") Новости
+						li
+							a(href="#") Рейтинг
+						li
+							a(href="#") О битве
+					// connect
+					.connect.mobile-visible
+						.connect__row
+							a(href="tel:+78005519588").connect__tel.connect__tel--big +7 (800) 551 95 88
+						.connect__row.connect__row--flex
+							a(href="tel:+79206629630").connect__tel.connect__tel--small +7 920-662-96-30
+							.connect__social 
+								a(href="#").connect__icon.connect__icon--whatsapp
+									img(src="img/whatsapp.svg", alt="")
+								a(href="#").connect__icon.connect__icon--telegram
+									img(src="img/telegram.svg", alt="")
+								a(href="#").connect__icon.connect__icon--viber
+									img(src="img/viber.svg", alt="")
+					//	/connect
+					a(href="#").header__location.mobile-visible
+						<svg id="Layer_1" enable-background="new 0 0 512 512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><g><path d="m407.579 87.677c-31.073-53.624-86.265-86.385-147.64-87.637-2.62-.054-5.257-.054-7.878 0-61.374 1.252-116.566 34.013-147.64 87.637-31.762 54.812-32.631 120.652-2.325 176.123l126.963 232.387c.057.103.114.206.173.308 5.586 9.709 15.593 15.505 26.77 15.505 11.176 0 21.183-5.797 26.768-15.505.059-.102.116-.205.173-.308l126.963-232.387c30.304-55.471 29.435-121.311-2.327-176.123zm-151.579 144.323c-39.701 0-72-32.299-72-72s32.299-72 72-72 72 32.299 72 72-32.298 72-72 72z"/></g></svg>
+						span Ваш город - Москва
+						span.header__location-span (изменить)
+					ul.header__user.mobile-visible
+						li
+							a(href="#") Регистрация 
+						li
+							a(href="#") Личный кабинет 
+			// /menu
+
+			// search
+			.search.mobile-hide
+				input#search_mob.search__input(type="text")
+				label.search__label(for="search_mob") 
+					<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-1 0 136 136.21852">
+						<path d="M 93.148438 80.832031 C 109.5 57.742188 104.03125 25.769531 80.941406 9.421875 C 57.851562 -6.925781 25.878906 -1.460938 9.53125 21.632812 C -6.816406 44.722656 -1.351562 76.691406 21.742188 93.039062 C 38.222656 104.707031 60.011719 105.605469 77.394531 95.339844 L 115.164062 132.882812 C 119.242188 137.175781 126.027344 137.347656 130.320312 133.269531 C 134.613281 129.195312 134.785156 122.410156 130.710938 118.117188 C 130.582031 117.980469 130.457031 117.855469 130.320312 117.726562 Z M 51.308594 84.332031 C 33.0625 84.335938 18.269531 69.554688 18.257812 51.308594 C 18.253906 33.0625 33.035156 18.269531 51.285156 18.261719 C 69.507812 18.253906 84.292969 33.011719 84.328125 51.234375 C 84.359375 69.484375 69.585938 84.300781 51.332031 84.332031 C 51.324219 84.332031 51.320312 84.332031 51.308594 84.332031 Z M 51.308594 84.332031"/>
+					</svg>
+			//	/search
+
+// /header

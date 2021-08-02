@@ -1,0 +1,81 @@
+.connect {
+  font-weight: bold;
+  &__row {
+    &--flex {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+  }
+  &__tel {
+    color: $blue;
+    &--big {
+      font-size: 30px;
+    }
+    &--small {
+      font-size: 20px;
+      text-decoration: underline;
+      margin-right: 10px;
+    }
+    &:hover {
+      color: $red;
+    }
+  }
+  &__social {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -2px;
+  }
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    border-radius: 100%;
+    margin-left: 2px;
+    margin-bottom: 2px;
+    transition: 0.2s;
+    img {
+      width: 16px;
+      transition: 0.2s;
+    }
+    &--whatsapp {
+      background-color: #00D45D;
+      img {
+        width: 18px;
+      }
+    }
+    &--telegram {
+      background-color: #00A9EB;
+    }
+    &--viber {
+      background-color: #775DF6;
+      img {
+        width: 18px;
+      }
+    }
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  @media (max-width: $break_sm) {
+    &__row {
+      margin-bottom: 10px;
+    }
+    &__tel {
+      &--big {
+        font-size: 16px;
+      }
+      &--small {
+        width: 100%;
+        font-size: 16px;
+        text-decoration: none;
+      }
+    }
+    &__social {
+      margin-top: 20px;
+    }
+  }
+}

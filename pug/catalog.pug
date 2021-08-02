@@ -1,0 +1,102 @@
+extends blocks/base.pug
+
+block title 
+	title Каталог товаров
+
+block style-libs
+	//- link(rel="stylesheet", href="css/libs/bootstrap-grid.min.css")
+	//- link(rel="stylesheet", href="css/libs/fullpage.css")
+	//- link(rel="stylesheet", href="css/libs/hamburgers.min.css")
+	//- link(rel="stylesheet", href="css/libs/jquery.fancybox.min.css")
+	//- link(rel="stylesheet", href="css/libs/jquery.mmenu.all.css")
+	//- link(rel="stylesheet", href="css/libs/jquery.scrollbar.css")
+	//- link(rel="stylesheet", href="css/libs/slick.css")
+	//- link(rel="stylesheet", href="css/libs/tooltipster.bundle.min.css")
+	//- link(rel="stylesheet", href="css/libs/aos.css")
+
+block content
+
+	include blocks/card.pug
+
+	.page
+
+		include blocks/header.pug
+		
+		.content
+			.wrapper
+
+				// breadcrambs
+				ul.breadcrambs
+					li 
+						a(href="#") Главная
+					li 
+						span Каталог проектов
+				//	/breadcrambs
+
+				// filters
+				.filters
+					.filters__btn.btn.js-drop-btn-filters(data-drop="filters") Фильтры
+					form(action="#").filters__form.js-drop-filters#filters
+						.filters__category 
+							span По категории
+							.filters__icon 
+								input#filter_catergory_1(type="radio" name="filter_catergory")
+								label(for="filter_catergory_1") 
+									img(src="img/001_idea.png", alt="")
+							.filters__icon 
+								input#filter_catergory_2(type="radio" name="filter_catergory")
+								label(for="filter_catergory_2") 
+									img(src="img/002_mvp.png", alt="")
+							.filters__icon 
+								input#filter_catergory_3(type="radio" name="filter_catergory")
+								label(for="filter_catergory_3") 
+									img(src="img/003_biz.png", alt="")
+						.filters__items 
+							.filters__item 
+								input#filter_1(type="radio" name="filters")
+								label.btn(for="filter_1") По цене
+							.filters__item 
+								input#filter_2(type="radio" name="filters")
+								label.btn(for="filter_2") По категории
+							.filters__item 
+								input#filter_3(type="radio" name="filters")
+								label.btn(for="filter_3") По дате
+							.filters__item 
+								input#filter_4(type="radio" name="filters")
+								label.btn(for="filter_4") По локации
+				//	/filters
+
+				// category
+				.category
+					.row 
+						.category__col
+							+card('favorite_1')
+						.category__col
+							+card('favorite_2')
+						.category__col
+							+card('favorite_3')
+						.category__col
+							+card('favorite_4')
+				//	/category
+			
+		include blocks/banner.pug
+
+		include blocks/footer.pug
+
+block js-libs
+	script(src="js/libs/jquery.min.js")
+	//- script(src="js/libs/jquery.fancybox.min.js")
+	//- script(src="js/libs/slick.min.js")
+	//- script(src="js/libs/jquery.matchHeight-min.js")
+	//- script(src="js/libs/jquery.inputmask.min.js")
+	//- script(src="js/libs/autosize.min.js")
+	//- script(src="js/libs/tooltipster.bundle.min.js")
+	//- script(src="js/libs/jquery.mmenu.min.all.js")
+	//- script(src="js/libs/fullpage.min.js")
+	//- script(src="js/libs/jquery.vide.min.js")
+	//- script(src="js/libs/jquery.scrollbar.min.js")
+	//- script(src="js/libs/aos.js")
+	//- script(src="js/libs/circle-progress.min.js")
+	//- script(src="js/libs/bootstrap.bundle.min.js") 
+	//- script(src="http://api-maps.yandex.ru/2.1/?lang=ru_RU")
+	//- script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDArYzQvxn3CL3pB92Iqn9gaDltBFLfF4Y")

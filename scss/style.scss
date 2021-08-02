@@ -1,0 +1,49 @@
+@import 'mixins';
+
+@include reset(); // Сброс стилей
+
+@import 'mixingrid';
+
+// Переменные для кастомизации Mixingrid
+$columns: 12; // Колличество колонок
+$max-width: 1168px; // Максимальная ширина контейнера
+$gutter: 20px; // Расстояние между колонками
+$offset: 30px; // Поля контейнера
+$offset-sm: 15px; // Поля контейнера на мобилке
+// Брэйкпоинты
+$break_xl: 1400px;
+$break_lg: 1200px;
+$break_md: 1050px;
+$break_sm: 769px;
+$break_xs: 500px;
+
+// Шрифты
+@include font-face("Montserrat", "../fonts/montserrat/montserrat-v15-latin_cyrillic-300", 300, normal);
+@include font-face("Montserrat", "../fonts/montserrat/montserrat-v15-latin_cyrillic-regular", normal, normal);
+@include font-face("Montserrat", "../fonts/montserrat/montserrat-v15-latin_cyrillic-500", 500, normal);
+@include font-face("Montserrat", "../fonts/montserrat/montserrat-v15-latin_cyrillic-600", 600, normal);
+@include font-face("Montserrat", "../fonts/montserrat/montserrat-v15-latin_cyrillic-700", bold, normal);
+@include font-face("Montserrat", "../fonts/montserrat/montserrat-v15-latin_cyrillic-800", 800, normal);
+@include font-face("Montserrat", "../fonts/montserrat/montserrat-v15-latin_cyrillic-900", 900, normal);
+
+// Цвета
+$blue: #00359A;
+$red: #FF6702;
+
+// Подключение файлов
+@import 'blocks/settings';
+@import 'hamburgers/hamburgers';
+@import 'blocks/menu';
+@import 'blocks/header';
+@import 'blocks/connect';
+@import 'blocks/search';
+@import 'blocks/breadcrambs';
+@import 'blocks/filters';
+@import 'blocks/category';
+@import 'blocks/card';
+@import 'blocks/banner';
+@import 'blocks/footer';
+// @import 'blocks/accordion';
+// @import 'blocks/modal';
+// @import 'blocks/tooltipster-noir';
+// @import 'blocks/tabs';
