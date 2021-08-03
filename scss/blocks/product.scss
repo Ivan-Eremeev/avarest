@@ -1,0 +1,219 @@
+.product {
+  &__title {
+    font-size: 26px;
+    font-weight: bold;
+    color: $blue;
+    margin-bottom: 40px;
+  }  
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  &__slider {
+    display: flex;
+    width: 48%;
+  }
+  &__slider-nav {
+    width: 60px;
+    .slick-list {
+      padding: 0 5px;
+    }
+    .slick-slide {
+      height: 50px;
+      border: 1px solid #CDCDCD;
+      border-radius: 5px;
+      overflow: hidden;
+      cursor: pointer;
+      margin-bottom: 20px;
+      box-shadow: 0 10px 10px rgba(0,0,0,.1);
+      > div {
+        height: 100%;
+      }
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .slick-current {
+      border-color: $blue;
+    }
+  }
+  &__slider-for {
+    width: calc(100% - 80px);
+    margin-left: 20px;
+    border: 1px solid #CDCDCD;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 10px 10px rgba(0,0,0,.1);
+  }
+  &__content {
+    width: 52%;
+    padding-left: 30px;
+  }
+  &__head {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  &__price {
+    font-size: 34px;
+    font-weight: bold;
+    color: $blue;
+    margin: 10px 0;
+  }
+  &__favorite {
+    display: flex;
+    align-items: center;
+    svg {
+      width: 38px;
+      margin-right: 20px;
+      fill: #8F8888;
+      transition: 0.2s;
+    }
+    input {
+      display: none;
+      &:checked {
+        + svg {
+          fill: $red;
+          animation: favorite 0.2s ease;
+        }
+      }
+    }
+  }
+  &__btn-red {
+    display: inline-block;
+    padding: 15px 55px;
+    background-color: $red;
+    border-radius: 30px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    user-select: none;
+    cursor: pointer;
+    transition: 0.2s;
+    &:hover {
+      background-color: lighten($red, 10%);
+    }
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 15px;
+    margin-bottom: 15px;
+    li {
+      &:not(:last-child) {
+        position: relative;
+        padding-right: 10px;
+        margin-right: 10px;
+        &:after {
+          content: '';
+          display: block;
+          width: 1px;
+          height: 60%;
+          background-color: #0020DF;
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translate(0,-50%);
+        }
+      }
+    }
+    a {
+      display: inline-block;
+      margin: 5px 0;
+      color: #0020DF;
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+  &__socials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    border-top: 1px solid #CDCDCD;
+    border-bottom: 1px solid #CDCDCD;
+    font-size: 15px;
+    span {
+      margin: 5px 0;
+    }
+  }
+  &__socials-icons {
+    display: flex;
+    margin-left: -10px;
+  }
+  &__social {
+    display: block;
+    width: 35px;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    img {
+      display: block;
+    }
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  &__text {
+    padding: 20px 0 25px;
+    border-bottom: 1px solid #CDCDCD;
+    p {
+      margin-bottom: 10px;
+    }
+  }
+  &__icons {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -20px;
+    padding: 10px 0;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 15px;
+    color: $blue;
+    span {
+
+    }
+    &:hover {
+      color: $red;
+    }
+  }
+  &__icon {
+    width: 55px;
+  }
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 0;
+    border-bottom: 1px solid #CDCDCD;
+  }
+  &__percent {
+    font-size: 30px;
+    font-weight: bold;
+  }
+  &__btn-blue {
+    padding: 18px 40px;
+    background-color: $blue;
+    color: #fff;
+    user-select: none;
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    &:hover {
+      background-color: lighten($blue, 10%);
+    }
+  }
+}

@@ -5,8 +5,8 @@ function slider(slider,sliderFor) {
       slidesToShow: 1, // Сколько слайдов показывать на экране
       slidesToScroll: 1, // Сколько слайдов пролистывать за раз
       asNavFor: sliderFor, // Связь со слайдерами
-      dots: true, // Пагинация
-      arrows: true, // Стрелки
+      dots: false, // Пагинация
+      arrows: false, // Стрелки
       speed: 500, // Скорость перехода слайдов
       autoplay: false, // Автопрокрутка
       autoplaySpeed: 2000, // Скорость автопрокрутки
@@ -39,16 +39,19 @@ function slider(slider,sliderFor) {
     });
     
     sliderFor.slick({
-      slidesToShow: 1, // Сколько слайдов показывать на экране
+      slidesToShow: 3, // Сколько слайдов показывать на экране
       slidesToScroll: 1, // Сколько слайдов пролистывать за раз
       dots: false, // Пагинация
       arrows: false, // Стрелки
-      fade: true, // Плавный переход (анимация исчезновения появления) В false будет листаться
-      asNavFor: slider // Связь со слайдерами
+      vertical: true, // Вертикальный слайдер
+      // fade: true, // Плавный переход (анимация исчезновения появления) В false будет листаться
+      asNavFor: slider, // Связь со слайдерами
+      focusOnSelect: true, // Выбрать слайд кликом
+      infinite: false, // Зацикленное пролистывание
     });
   }
 }
-slider();
+slider($('.product__slider-for'), $('.product__slider-nav'));
 
 // $('.your-slider').slick('unslick'); // Уничтожить слайдер
 

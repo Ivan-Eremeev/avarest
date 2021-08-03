@@ -1,0 +1,31 @@
+.product-description {
+  &__title {
+
+  }
+  &__row {
+    display: flex;
+    margin-left: -30px;
+  }
+  &__col {
+    padding-left: 30px;
+    &--1 {
+      width: 48%;
+    }
+    &--2 {
+      width: 52%;
+    }
+  }
+  &__block {
+    a {
+
+    }
+  }
+  &__subtitle {
+    
+  }
+  &__list {
+    li {
+      
+    }
+  }
+}

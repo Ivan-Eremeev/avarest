@@ -13,7 +13,8 @@
 			<!-- header-->
 			<header class="header">
 				<div class="header__top"> 
-					<div class="wrapper"><a class="header__location" href="#"><svg id="Layer_1" enable-background="new 0 0 512 512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><g><path d="m407.579 87.677c-31.073-53.624-86.265-86.385-147.64-87.637-2.62-.054-5.257-.054-7.878 0-61.374 1.252-116.566 34.013-147.64 87.637-31.762 54.812-32.631 120.652-2.325 176.123l126.963 232.387c.057.103.114.206.173.308 5.586 9.709 15.593 15.505 26.77 15.505 11.176 0 21.183-5.797 26.768-15.505.059-.102.116-.205.173-.308l126.963-232.387c30.304-55.471 29.435-121.311-2.327-176.123zm-151.579 144.323c-39.701 0-72-32.299-72-72s32.299-72 72-72 72 32.299 72 72-32.298 72-72 72z"/></g></svg><span>Ваш город - Москва</span><span class="header__location-span">(изменить)</span></a>
+					<div class="wrapper">
+						<div class="header__location modal-trigger" data-modal="#modal-1"><svg id="Layer_1" enable-background="new 0 0 512 512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><g><path d="m407.579 87.677c-31.073-53.624-86.265-86.385-147.64-87.637-2.62-.054-5.257-.054-7.878 0-61.374 1.252-116.566 34.013-147.64 87.637-31.762 54.812-32.631 120.652-2.325 176.123l126.963 232.387c.057.103.114.206.173.308 5.586 9.709 15.593 15.505 26.77 15.505 11.176 0 21.183-5.797 26.768-15.505.059-.102.116-.205.173-.308l126.963-232.387c30.304-55.471 29.435-121.311-2.327-176.123zm-151.579 144.323c-39.701 0-72-32.299-72-72s32.299-72 72-72 72 32.299 72 72-32.298 72-72 72z"/></g></svg><span>Ваш город - Москва</span><span class="header__location-span">(изменить)</span></div>
 						<ul class="header__user"> 
 							<li><a href="#">Регистрация </a></li>
 							<li><a href="#">Личный кабинет </a></li>
@@ -66,7 +67,7 @@
 										<div class="connect__social"> <a class="connect__icon connect__icon--whatsapp" href="#"><img src="img/whatsapp.svg" alt=""></a><a class="connect__icon connect__icon--telegram" href="#"><img src="img/telegram.svg" alt=""></a><a class="connect__icon connect__icon--viber" href="#"><img src="img/viber.svg" alt=""></a></div>
 									</div>
 								</div>
-								<!--	/connect--><a class="header__location mobile-visible" href="#"><svg id="Layer_1" enable-background="new 0 0 512 512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><g><path d="m407.579 87.677c-31.073-53.624-86.265-86.385-147.64-87.637-2.62-.054-5.257-.054-7.878 0-61.374 1.252-116.566 34.013-147.64 87.637-31.762 54.812-32.631 120.652-2.325 176.123l126.963 232.387c.057.103.114.206.173.308 5.586 9.709 15.593 15.505 26.77 15.505 11.176 0 21.183-5.797 26.768-15.505.059-.102.116-.205.173-.308l126.963-232.387c30.304-55.471 29.435-121.311-2.327-176.123zm-151.579 144.323c-39.701 0-72-32.299-72-72s32.299-72 72-72 72 32.299 72 72-32.298 72-72 72z"/></g></svg><span>Ваш город - Москва</span><span class="header__location-span">(изменить)</span></a>
+								<!--	/connect--><a class="header__location mobile-visible modal-trigger" href="#" data-modal="#modal-1"><svg id="Layer_1" enable-background="new 0 0 512 512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><g><path d="m407.579 87.677c-31.073-53.624-86.265-86.385-147.64-87.637-2.62-.054-5.257-.054-7.878 0-61.374 1.252-116.566 34.013-147.64 87.637-31.762 54.812-32.631 120.652-2.325 176.123l126.963 232.387c.057.103.114.206.173.308 5.586 9.709 15.593 15.505 26.77 15.505 11.176 0 21.183-5.797 26.768-15.505.059-.102.116-.205.173-.308l126.963-232.387c30.304-55.471 29.435-121.311-2.327-176.123zm-151.579 144.323c-39.701 0-72-32.299-72-72s32.299-72 72-72 72 32.299 72 72-32.298 72-72 72z"/></g></svg><span>Ваш город - Москва</span><span class="header__location-span">(изменить)</span></a>
 								<ul class="header__user mobile-visible">
 									<li><a href="#">Регистрация </a></li>
 									<li><a href="#">Личный кабинет </a></li>
@@ -84,6 +85,29 @@
 							</label>
 						</div>
 						<!--	/search-->
+						<!-- modal-->
+						<div class="modal" id="modal-1">
+							<div class="modal_body">
+								<form class="modal_content" action="#">
+									<div class="modal__head"> 
+										<div class="modal__title">Ваш город:</div>
+										<div class="modal__city">Москва</div>
+										<div class="modal_close js-modal_close"></div>
+									</div>
+									<div class="modal__main"> 
+										<div class="modal__text">Новый город доставки:</div>
+										<div class="modal__input"> 
+											<input type="text" placeholder="Укажите город">
+										</div>
+									</div>
+									<div class="modal__footer"> 
+										<button class="modal__btn modal__btn--blue" type="submit">Сохранить</button>
+										<div class="modal__btn modal__btn--white js-modal_close">Отменить</div>
+									</div>
+								</form>
+							</div>
+						</div>
+						<!-- /modal-->
 					</div>
 				</div>
 			</header>
@@ -282,7 +306,7 @@
 					<div class="footer__bottom">
 						<div class="footer__paysistems"> <img class="footer__robo" src="img/robokassa.png" alt=""><img class="footer__pays" src="img/paysistems.png" alt=""></div>
 						<div class="footer__row footer__row--align-center">
-							<div class="footer__col"><a class="footer__logo" href="#"> <img src="img/logo.png" alt=""></a></div>
+							<div class="footer__col"><a class="footer__logo" href="#"> <img src="img/logo_2.jpg" alt=""></a></div>
 							<div class="footer__col footer__col--center">
 								<p><a href="#">Соглашение по обрабоке персональных данных</a></p>
 								<p><a href="#">Положение о конкурсе "Международная битва проектов"</a></p>

@@ -10,7 +10,7 @@ block style-libs
 	//- link(rel="stylesheet", href="css/libs/jquery.fancybox.min.css")
 	//- link(rel="stylesheet", href="css/libs/jquery.mmenu.all.css")
 	//- link(rel="stylesheet", href="css/libs/jquery.scrollbar.css")
-	//- link(rel="stylesheet", href="css/libs/slick.css")
+	link(rel="stylesheet", href="css/libs/slick.css")
 	//- link(rel="stylesheet", href="css/libs/tooltipster.bundle.min.css")
 	//- link(rel="stylesheet", href="css/libs/aos.css")
 
@@ -23,14 +23,130 @@ block content
 		.content
 			.wrapper
 
-				
+				// breadcrambs
+				ul.breadcrambs
+					li 
+						a(href="#") Главная
+					li 
+						a(href="#") Каталог проектов
+					li 
+						span Проект &#8470;0001
+				//	/breadcrambs
+
+				// product
+				.favourites
+					h1.product__title Проект &#8470;0001 - Производство одежды PolinaKids
+					.product__row 
+						.product__slider 
+							.product__slider-nav
+								img(src="img/product.jpg", alt="")
+								img(src="img/product.jpg", alt="")
+								img(src="img/product.jpg", alt="")
+								img(src="img/product.jpg", alt="")
+							.product__slider-for
+								img(src="img/product.jpg", alt="")
+								img(src="img/product.jpg", alt="")
+								img(src="img/product.jpg", alt="")
+								img(src="img/product.jpg", alt="")
+						form(action="#").product__content
+							.product__head 
+								.product__price 2 500 000 &#8381;
+								.product__favorite
+									input#favorite(type="checkbox")
+									svg(xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 477.899 477.899")
+										path(d="M469.11,170.122c-5.462-6.13-12.926-10.117-21.058-11.249v-0.017l-127.01-17.545L270.781,21.213 c-7.339-17.579-27.539-25.88-45.117-18.541c-8.38,3.499-15.043,10.161-18.541,18.541l-50.261,120.098l-127.01,17.545 c-18.923,2.634-32.128,20.111-29.494,39.034c1.132,8.132,5.119,15.596,11.249,21.058l95.693,85.333L87.638,438.185 c-2.13,13.597,4.115,27.144,15.838,34.355c11.558,7.391,26.425,7.115,37.7-0.7l97.775-66.492l97.775,66.56 c15.777,10.708,37.248,6.599,47.957-9.178c4.866-7.17,6.859-15.907,5.582-24.477l-19.661-133.956l95.693-85.333 C480.561,206.254,481.821,184.386,469.11,170.122z M341.01,285.012c-4.281,3.825-6.352,9.545-5.513,15.224l20.48,143.36 l-107.383-73.011c-5.789-3.934-13.394-3.934-19.183,0l-108.015,72.567l21.009-142.984c0.816-5.656-1.254-11.345-5.513-15.155 l-102.4-92.297l136.67-18.859c5.984-0.825,11.085-4.752,13.414-10.325l54.579-129.399c0.062,0.076,0.108,0.163,0.137,0.256 l54.016,129.075c2.329,5.573,7.431,9.5,13.414,10.325l136.841,19.695L341.01,285.012z")
+									label(for="favorite").product__btn-red Голосовать
+							ul.product__list 
+								li 
+									a(href="#") Обучение инвестированию
+								li 
+									a(href="#") Сувениры
+								li 
+									a(href="#") Инвестиционные программы
+							.product__socials
+								span Поделись ссылкой на проект и заработай*:
+								.product__socials-icons
+									a(href="#").product__social
+										img(src="img/ok.png", alt="")
+									a(href="#").product__social
+										img(src="img/vk.png", alt="")
+									a(href="#").product__social
+										img(src="img/insta.png", alt="")
+									a(href="#").product__social
+										img(src="img/fb.png", alt="")
+									a(href="#").product__social
+										img(src="img/mail.png", alt="")
+							.product__text 
+								p Запуск собственной производственной линии стильной, дизайнерской одежды для мам и девочек под брендом <br>PolinaKids
+							.product__icons 
+								a(href="#").product__item
+									img(src="img/03_vid.png", alt="").product__icon
+									span Смотреть видео
+								a(href="#").product__item
+									img(src="img/01_bp.png", alt="").product__icon
+									span Скачать ТЭО
+								a(href="#").product__item
+									img(src="img/02_teo.png", alt="").product__icon
+									span Скачать БП
+							.product__footer 
+								img(src="img/04.jpg", alt="").product__icon
+								.product__percent от 25% до 45%
+								a(href="#").product__btn-blue Инвестировать
+				//	/product
+
+				// product-block
+				.product-block
+					.product-block__icons 
+						a(href="#").product-block__icon
+							img(src="img/001_idea.png", alt="")
+						a(href="#").product-block__icon
+							img(src="img/002_mvp.png", alt="")
+						a(href="#").product-block__icon
+							img(src="img/003_biz.png", alt="")
+					.product-block__location 
+						span Локация: 
+						a(href="#") Сочи
+					.product-block__quest 
+						p
+							a(href="#") * Как проинвестировать этот проект?
+						p
+							a(href="#") ** Как предложить свой проект?
+				//	/product-block
+
+				// product-description
+				.product-description
+					.product-description__title 
+					.product-description__row 
+						.product-description__col.product-description__col--1
+							p Далеко-далеко за словесными горами в стране гласных, и согласных живут рыбные тексты. Грустный образ большого, это пояс он себя, диких всеми над собрал составитель, встретил дал переписали! Вопрос рыбными власти lorem снова. Алфавит букв, пунктуация лучше даль текста наш текстов она которое строчка запятых заголовок, переулка залетают маленькая злых всеми запятой рукописи одна предупреждал над родного. Пояс сбить рукописи диких переписали залетают, снова агентство проектах, подзаголовок обеспечивает сих несколько продолжил ты оксмокс последний домах вдали рыбными вопроса за имеет! Единственное строчка продолжил курсивных пунктуация первую решила переулка взобравшись путь большой, но образ заголовок имеет! Инициал, переулка. Скатился то рот возвращайся напоивший дорогу?
+						.product-description__col.product-description__col-2
+							.product-description__block
+								.product-description__subtitle Почему проект будет приносить прибыль?
+								ul.product-description__list 
+									li Далеко-далеко за словесными горами в стране.
+									li Далеко-далеко за словесными горами.
+									li Далеко-далеко, за.
+							.product-description__block
+								.product-description__subtitle Преимущества
+								ul.product-description__list 
+									li Далеко-далеко за словесными горами.
+									li Далеко-далеко за словесными горами.
+									li Далеко-далеко, за словесными.
+									li Далеко-далеко, за.
+									li Далеко-далеко, за.
+									li Далеко-далеко, за.
+									li Далеко-далеко, за.
+								a(href="#") 
+					.product-description__title Актуальность
+						p Далеко-далеко за словесными горами, в стране гласных и согласных живут рыбные тексты. Но, текст прямо своих, приставка агентство они переписали первую то наш страну путь снова свой составитель рукопись пунктуация, коварных всемогущая последний рыбного. Переписывается, до решила подзаголовок, большой вопрос буквоград буквенных снова о вершину, сбить предложения он безопасную. Коварный гор последний, первую, рукопись не рыбными журчит составитель себя большой даже своих то пор, встретил моей! Одна, проектах реторический. Реторический одна безорфографичный мир свою? Деревни безопасную если путь но своего страну не, сих заглавных великий переписывается рот курсивных на берегу? Сих, языкового последний живет снова домах подпоясал власти бросил рыбного города единственное переписали.
+				//	/product-description
 			
 		include blocks/footer.pug
 
 block js-libs
 	script(src="js/libs/jquery.min.js")
 	//- script(src="js/libs/jquery.fancybox.min.js")
-	//- script(src="js/libs/slick.min.js")
+	script(src="js/libs/slick.min.js")
 	//- script(src="js/libs/jquery.matchHeight-min.js")
 	//- script(src="js/libs/jquery.inputmask.min.js")
 	//- script(src="js/libs/autosize.min.js")

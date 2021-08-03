@@ -14,7 +14,64 @@ $(document).ready(function () {
 	
 	// Подключение настроек плагинов. Использовать "//=" перед строкой пути
 	// libs-settings/fancybox_settings.js
-	// libs-settings/slick_settings.js
+	// Slick Slider
+	function slider(slider,sliderFor) {
+	  if (slider.length) {
+	    slider.slick({
+	      slidesToShow: 1, // Сколько слайдов показывать на экране
+	      slidesToScroll: 1, // Сколько слайдов пролистывать за раз
+	      asNavFor: sliderFor, // Связь со слайдерами
+	      dots: false, // Пагинация
+	      arrows: false, // Стрелки
+	      speed: 500, // Скорость перехода слайдов
+	      autoplay: false, // Автопрокрутка
+	      autoplaySpeed: 2000, // Скорость автопрокрутки
+	      centerMode: false, // Задает класс .slick-center слайду в центре
+	      focusOnSelect: true, // Выбрать слайд кликом
+	      infinite: false, // Зацикленное пролистывание
+	      vertical: false, // Вертикальный слайдер
+	      rtl: false, // Слайды листаются справа налево
+	      centerPadding: '0px', // Отступы слева и справа чтоб увидеть часть крайних слайдов
+	      adaptiveHeight: true, // Подгоняет высоту слайдера под элемент слайда
+	      variableWidth: false, // Подгоняет ширину слайдов под размер элемента,
+	      swipe: true, // Перелистывание пальцем
+	      draggable: true, // Перелистывание мышью
+	      swipeToSlide: true, // Свободное перелистывание (на произвольное кол-во слайдов)
+	      responsive: [ // Адаптация
+	        {
+	        breakpoint: 992,
+	          settings: {
+	            arrows: false,
+	          }
+	        },
+	        {
+	        breakpoint: 720,
+	          settings: {
+	            arrows: false,
+	          }
+	        }
+	      ]
+	      // lazyLoad: 'ondemand', // Отложенная загрузка изображений. В тэг надо добавлять атрибут <img data-lazy="img/image.png"/>
+	    });
+	    
+	    sliderFor.slick({
+	      slidesToShow: 3, // Сколько слайдов показывать на экране
+	      slidesToScroll: 1, // Сколько слайдов пролистывать за раз
+	      dots: false, // Пагинация
+	      arrows: false, // Стрелки
+	      vertical: true, // Вертикальный слайдер
+	      // fade: true, // Плавный переход (анимация исчезновения появления) В false будет листаться
+	      asNavFor: slider, // Связь со слайдерами
+	      focusOnSelect: true, // Выбрать слайд кликом
+	      infinite: false, // Зацикленное пролистывание
+	    });
+	  }
+	}
+	slider($('.product__slider-for'), $('.product__slider-nav'));
+	
+	// $('.your-slider').slick('unslick'); // Уничтожить слайдер
+	
+	// $('.your-slider').slick('setPosition') // Переотрисовка слайдера. Например для использования в табах
 	// libs-settings/fullpage_settings.js
 	// libs-settings/tinyscrollbar-settings.js
 	// libs-settings/tooltipster-settings.js
@@ -176,43 +233,33 @@ $(document).ready(function () {
 	// }
 	// accordion();
 
-	// // Модальное окно
-	// function modal(modal) {
-	// 	$('.modal-trigger').on('click', function() {
-	// 		var $this = $(this),
-	// 				data = $this.data('modal'),
-	// 				thisModal = $(data);
-	// 		modalShow(thisModal);
-	// 	});
-	// };
-	// // Открытие модального окна
-	// function modalShow(thisModal) {
-	// 	var html = $('html'),
-	// 			modalClose = thisModal.find($('.modal_close')),
-	// 			documentWidth = parseInt(document.documentElement.clientWidth),
-	// 			windowsWidth = parseInt(window.innerWidth),
-	// 			scrollbarWidth = windowsWidth - documentWidth;
-	// 	thisModal.show(0, function() {
-	// 		setTimeout(thisModal.addClass('open'),500);
-	// 	});
-	// 	html.addClass('lock').css('padding-right',scrollbarWidth);
-	// 	modalClose.on('click', function() {
-	// 		modalHide(thisModal);
-	// 	});
-	// 	thisModal.on('click', function(e) {
-	// 		if (thisModal.has(e.target).length === 0) {
-	// 			modalHide(thisModal);
-	// 		}
-	// 	});
-	// };
-	// // Закрытие модального окна
-	// function modalHide(thisModal) {
-	// 	var html = $('html');
-	// 	thisModal.removeClass('open');
-	// 	thisModal.hide();
-	// 	html.removeClass('lock').css('padding-right',0);
-	// };
-	// modal();
+	// Модальное окно
+	function modal() {
+		$('.modal-trigger').on('click', function() {
+			var $this = $(this),
+					data = $this.data('modal'),
+					thisModal = $(data);
+			modalShow(thisModal);
+		});
+	};
+	// Открытие модального окна
+	function modalShow(thisModal) {
+		var modalClose = thisModal.find($('.js-modal_close'));
+		thisModal.addClass('open');
+		modalClose.on('click', function() {
+			modalHide(thisModal);
+		});
+		thisModal.on('click', function(e) {
+			if (thisModal.has(e.target).length === 0) {
+				modalHide(thisModal);
+			}
+		});
+	};
+	// Закрытие модального окна
+	function modalHide(thisModal) {
+		thisModal.removeClass('open');
+	};
+	modal();
 
 	// // Текст печатная машинка
 	// function textPrint(block) {

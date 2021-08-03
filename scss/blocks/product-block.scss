@@ -1,0 +1,41 @@
+.product-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__icons {
+    display: flex;
+    margin: 5px 0;
+  }
+  &__icon {
+    display: block;
+    width: 70px;
+    img {
+
+    }
+  }
+  &__location {
+    margin: 5px 0;
+    span {
+      
+    }
+    a {
+      color: #0020DF;
+      text-decoration: underline;
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+  &__quest {
+    margin: 5px 0;
+    p {
+      
+    }
+    a {
+      color: #0020DF;
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+}

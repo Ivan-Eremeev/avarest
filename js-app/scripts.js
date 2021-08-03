@@ -14,7 +14,7 @@ $(document).ready(function () {
 	
 	// Подключение настроек плагинов. Использовать "//=" перед строкой пути
 	// libs-settings/fancybox_settings.js
-	// libs-settings/slick_settings.js
+	//= libs-settings/slick_settings.js
 	// libs-settings/fullpage_settings.js
 	// libs-settings/tinyscrollbar-settings.js
 	// libs-settings/tooltipster-settings.js
@@ -176,43 +176,33 @@ $(document).ready(function () {
 	// }
 	// accordion();
 
-	// // Модальное окно
-	// function modal(modal) {
-	// 	$('.modal-trigger').on('click', function() {
-	// 		var $this = $(this),
-	// 				data = $this.data('modal'),
-	// 				thisModal = $(data);
-	// 		modalShow(thisModal);
-	// 	});
-	// };
-	// // Открытие модального окна
-	// function modalShow(thisModal) {
-	// 	var html = $('html'),
-	// 			modalClose = thisModal.find($('.modal_close')),
-	// 			documentWidth = parseInt(document.documentElement.clientWidth),
-	// 			windowsWidth = parseInt(window.innerWidth),
-	// 			scrollbarWidth = windowsWidth - documentWidth;
-	// 	thisModal.show(0, function() {
-	// 		setTimeout(thisModal.addClass('open'),500);
-	// 	});
-	// 	html.addClass('lock').css('padding-right',scrollbarWidth);
-	// 	modalClose.on('click', function() {
-	// 		modalHide(thisModal);
-	// 	});
-	// 	thisModal.on('click', function(e) {
-	// 		if (thisModal.has(e.target).length === 0) {
-	// 			modalHide(thisModal);
-	// 		}
-	// 	});
-	// };
-	// // Закрытие модального окна
-	// function modalHide(thisModal) {
-	// 	var html = $('html');
-	// 	thisModal.removeClass('open');
-	// 	thisModal.hide();
-	// 	html.removeClass('lock').css('padding-right',0);
-	// };
-	// modal();
+	// Модальное окно
+	function modal() {
+		$('.modal-trigger').on('click', function() {
+			var $this = $(this),
+					data = $this.data('modal'),
+					thisModal = $(data);
+			modalShow(thisModal);
+		});
+	};
+	// Открытие модального окна
+	function modalShow(thisModal) {
+		var modalClose = thisModal.find($('.js-modal_close'));
+		thisModal.addClass('open');
+		modalClose.on('click', function() {
+			modalHide(thisModal);
+		});
+		thisModal.on('click', function(e) {
+			if (thisModal.has(e.target).length === 0) {
+				modalHide(thisModal);
+			}
+		});
+	};
+	// Закрытие модального окна
+	function modalHide(thisModal) {
+		thisModal.removeClass('open');
+	};
+	modal();
 
 	// // Текст печатная машинка
 	// function textPrint(block) {
