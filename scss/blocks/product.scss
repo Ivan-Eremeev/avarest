@@ -8,6 +8,7 @@
   &__row {
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-start;
     margin-bottom: 20px;
   }
   &__slider {
@@ -215,6 +216,51 @@
     font-weight: 600;
     &:hover {
       background-color: lighten($blue, 10%);
+    }
+  }
+  @media (max-width: $break_md) {
+    &__slider {
+      width: 100%;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+    &__content {
+      width: 100%;
+      padding-left: 0;
+    }
+    &__slider-nav {
+      order: 1;
+      width: 165px;
+      margin-left: auto;
+      margin-right: auto;
+      .slick-slide {
+        margin-bottom: 0;
+        margin-left: 5px;
+        box-shadow:  0 5px 5px rgba(0,0,0,.1);
+      }
+      .slick-list {
+        padding: 10px 0;
+      }
+      .slick-track {
+        margin-left: -2.5px;
+      }
+      img {
+        width: 50px;
+      }
+    }
+    &__slider-for {
+      order: 0;
+      margin-bottom: 20px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  @media (max-width: $break_sm) {
+    &__btn-blue {
+      margin: 15px 0;
     }
   }
 }

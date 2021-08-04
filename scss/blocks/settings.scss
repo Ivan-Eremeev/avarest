@@ -1,6 +1,9 @@
 /* settings */
 html {
   height: 100%;
+  &.lock {
+    overflow: hidden;
+  }
 }
 a {
   transition: .2s;
@@ -18,9 +21,6 @@ body {
   background-color: #fff;
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
-  &.lock {
-    position: fixed;
-  }
 }
 .mobile-hide {
   @media (max-width: $break_sm) {

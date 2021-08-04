@@ -118,6 +118,9 @@ h1, h2, h3 {
 html {
   height: 100%;
 }
+html.lock {
+  overflow: hidden;
+}
 
 a {
   -webkit-transition: 0.2s;
@@ -139,9 +142,6 @@ body {
   background-color: #fff;
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
-}
-body.lock {
-  position: fixed;
 }
 
 @media (max-width: 769px) {
@@ -1395,6 +1395,9 @@ body.lock {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   margin-bottom: 20px;
 }
 .product__slider {
@@ -1654,11 +1657,64 @@ body.lock {
 .product__btn-blue:hover {
   background-color: #0047cd;
 }
+@media (max-width: 1050px) {
+  .product__slider {
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .product__content {
+    width: 100%;
+    padding-left: 0;
+  }
+  .product__slider-nav {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+    width: 165px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .product__slider-nav .slick-slide {
+    margin-bottom: 0;
+    margin-left: 5px;
+    -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  }
+  .product__slider-nav .slick-list {
+    padding: 10px 0;
+  }
+  .product__slider-nav .slick-track {
+    margin-left: -2.5px;
+  }
+  .product__slider-nav img {
+    width: 50px;
+  }
+  .product__slider-for {
+    -webkit-box-ordinal-group: 1;
+    -ms-flex-order: 0;
+    order: 0;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 769px) {
+  .product__btn-blue {
+    margin: 15px 0;
+  }
+}
 
 .product-block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -1712,6 +1768,8 @@ body.lock {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   margin-bottom: 25px;
 }
 .product-description__col--1 {
@@ -1745,6 +1803,16 @@ body.lock {
 }
 .product-description__list li {
   list-style-type: disc;
+}
+@media (max-width: 1050px) {
+  .product-description__row {
+    margin-bottom: 0;
+  }
+  .product-description__col {
+    width: 100%;
+    margin-bottom: 30px;
+    padding-left: 0;
+  }
 }
 
 .modal {

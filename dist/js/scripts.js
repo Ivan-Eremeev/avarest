@@ -23,35 +23,9 @@ $(document).ready(function () {
 	      asNavFor: sliderFor, // Связь со слайдерами
 	      dots: false, // Пагинация
 	      arrows: false, // Стрелки
-	      speed: 500, // Скорость перехода слайдов
-	      autoplay: false, // Автопрокрутка
-	      autoplaySpeed: 2000, // Скорость автопрокрутки
-	      centerMode: false, // Задает класс .slick-center слайду в центре
-	      focusOnSelect: true, // Выбрать слайд кликом
 	      infinite: false, // Зацикленное пролистывание
-	      vertical: false, // Вертикальный слайдер
-	      rtl: false, // Слайды листаются справа налево
-	      centerPadding: '0px', // Отступы слева и справа чтоб увидеть часть крайних слайдов
-	      adaptiveHeight: true, // Подгоняет высоту слайдера под элемент слайда
-	      variableWidth: false, // Подгоняет ширину слайдов под размер элемента,
 	      swipe: true, // Перелистывание пальцем
 	      draggable: true, // Перелистывание мышью
-	      swipeToSlide: true, // Свободное перелистывание (на произвольное кол-во слайдов)
-	      responsive: [ // Адаптация
-	        {
-	        breakpoint: 992,
-	          settings: {
-	            arrows: false,
-	          }
-	        },
-	        {
-	        breakpoint: 720,
-	          settings: {
-	            arrows: false,
-	          }
-	        }
-	      ]
-	      // lazyLoad: 'ondemand', // Отложенная загрузка изображений. В тэг надо добавлять атрибут <img data-lazy="img/image.png"/>
 	    });
 	    
 	    sliderFor.slick({
@@ -60,18 +34,21 @@ $(document).ready(function () {
 	      dots: false, // Пагинация
 	      arrows: false, // Стрелки
 	      vertical: true, // Вертикальный слайдер
-	      // fade: true, // Плавный переход (анимация исчезновения появления) В false будет листаться
 	      asNavFor: slider, // Связь со слайдерами
 	      focusOnSelect: true, // Выбрать слайд кликом
 	      infinite: false, // Зацикленное пролистывание
+	      responsive: [ // Адаптация
+	        {
+	          breakpoint: breakMd,
+	          settings: {
+	            vertical: false, // Вертикальный слайдер
+	          }
+	        },
+	      ]
 	    });
 	  }
 	}
 	slider($('.product__slider-for'), $('.product__slider-nav'));
-	
-	// $('.your-slider').slick('unslick'); // Уничтожить слайдер
-	
-	// $('.your-slider').slick('setPosition') // Переотрисовка слайдера. Например для использования в табах
 	// libs-settings/fullpage_settings.js
 	// libs-settings/tinyscrollbar-settings.js
 	// libs-settings/tooltipster-settings.js
@@ -710,7 +687,7 @@ $(document).ready(function () {
 	// Задать блокам выпадайкам .js-drop и айдишник совпадающий с data-drop="" в кнопке для этого блока
 	// Задать кнопкам .js-drop-btn и data-drop="" с айдишником блока выпадайки
 	function DropBlock(drop, button, overflow) {
-		var body = $('body');
+		var html = $('html');
 		button.on('click', function () { // клик по кнопке
 			var $this = $(this),
 					data = $this.data('drop');
@@ -720,13 +697,13 @@ $(document).ready(function () {
 				$this.addClass('is-active');
 				$('#' + data).addClass('open');
 				if (overflow) {
-					body.addClass('lock');
+					html.addClass('lock');
 				}
 			} else { // если не имеет класс .active скрываем все выпадайки
 				button.removeClass('is-active');
 				drop.removeClass('open');
 				if (overflow) {
-					body.removeClass('lock');
+					html.removeClass('lock');
 				}
 			}
 		})
@@ -738,10 +715,15 @@ $(document).ready(function () {
 				drop.removeClass('open');
 				button.removeClass('is-active');
 				if (overflow) {
-					body.removeClass('lock');
+					html.removeClass('lock');
 				}
 			}
 		});
+		$(window).resize(function () {
+			if ($(window).width() >= breakSm) {
+				html.removeClass('lock');
+			}
+		})
 	}
 	DropBlock($('.js-drop'), $('.js-drop-btn'), true);
 	DropBlock($('.js-drop-filters'), $('.js-drop-btn-filters'), false);

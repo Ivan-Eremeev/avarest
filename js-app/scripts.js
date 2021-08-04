@@ -653,7 +653,7 @@ $(document).ready(function () {
 	// Задать блокам выпадайкам .js-drop и айдишник совпадающий с data-drop="" в кнопке для этого блока
 	// Задать кнопкам .js-drop-btn и data-drop="" с айдишником блока выпадайки
 	function DropBlock(drop, button, overflow) {
-		var body = $('body');
+		var html = $('html');
 		button.on('click', function () { // клик по кнопке
 			var $this = $(this),
 					data = $this.data('drop');
@@ -663,13 +663,13 @@ $(document).ready(function () {
 				$this.addClass('is-active');
 				$('#' + data).addClass('open');
 				if (overflow) {
-					body.addClass('lock');
+					html.addClass('lock');
 				}
 			} else { // если не имеет класс .active скрываем все выпадайки
 				button.removeClass('is-active');
 				drop.removeClass('open');
 				if (overflow) {
-					body.removeClass('lock');
+					html.removeClass('lock');
 				}
 			}
 		})
@@ -681,10 +681,15 @@ $(document).ready(function () {
 				drop.removeClass('open');
 				button.removeClass('is-active');
 				if (overflow) {
-					body.removeClass('lock');
+					html.removeClass('lock');
 				}
 			}
 		});
+		$(window).resize(function () {
+			if ($(window).width() >= breakSm) {
+				html.removeClass('lock');
+			}
+		})
 	}
 	DropBlock($('.js-drop'), $('.js-drop-btn'), true);
 	DropBlock($('.js-drop-filters'), $('.js-drop-btn-filters'), false);
