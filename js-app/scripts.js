@@ -15,9 +15,9 @@ $(document).ready(function () {
 	//= libs-settings/slick_settings.js
 
 	// Запрет перехода по ссылкам с хэшем
-	$('a[href="#"]').click(function(e) {
-		e.preventDefault();
-	});
+	// $('a[href="#"]').click(function(e) {
+	// 	e.preventDefault();
+	// });
 
 	// Модальное окно
 	function modal() {
@@ -91,5 +91,12 @@ $(document).ready(function () {
 	}
 	DropBlock($('.js-drop'), $('.js-drop-btn'), true);
 	DropBlock($('.js-drop-filters'), $('.js-drop-btn-filters'), false);
+
+	// ToolTipster || Всплывающая подсказка
+	if ($('.tooltip').length) {
+		$('.tooltip').tooltipster({
+			theme: 'tooltipster-shadow',
+		});
+	}
 
 });

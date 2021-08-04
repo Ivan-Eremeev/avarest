@@ -7,6 +7,8 @@
 		<meta name="keywords" content="">
 		<meta name="description" content="">
 		<link rel="stylesheet" href="css/libs/slick.css">
+		<link rel="stylesheet" href="css/libs/tooltipster.bundle.min.css">
+		<link rel="stylesheet" href="css/libs/tooltipster-sideTip-shadow.min.css">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
@@ -135,10 +137,15 @@
 									<div class="product__price">2 500 000 &#8381;</div>
 									<div class="product__favorite">
 										<input id="favorite" type="checkbox">
-										<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 477.899 477.899">
-											<path d="M469.11,170.122c-5.462-6.13-12.926-10.117-21.058-11.249v-0.017l-127.01-17.545L270.781,21.213 c-7.339-17.579-27.539-25.88-45.117-18.541c-8.38,3.499-15.043,10.161-18.541,18.541l-50.261,120.098l-127.01,17.545 c-18.923,2.634-32.128,20.111-29.494,39.034c1.132,8.132,5.119,15.596,11.249,21.058l95.693,85.333L87.638,438.185 c-2.13,13.597,4.115,27.144,15.838,34.355c11.558,7.391,26.425,7.115,37.7-0.7l97.775-66.492l97.775,66.56 c15.777,10.708,37.248,6.599,47.957-9.178c4.866-7.17,6.859-15.907,5.582-24.477l-19.661-133.956l95.693-85.333 C480.561,206.254,481.821,184.386,469.11,170.122z M341.01,285.012c-4.281,3.825-6.352,9.545-5.513,15.224l20.48,143.36 l-107.383-73.011c-5.789-3.934-13.394-3.934-19.183,0l-108.015,72.567l21.009-142.984c0.816-5.656-1.254-11.345-5.513-15.155 l-102.4-92.297l136.67-18.859c5.984-0.825,11.085-4.752,13.414-10.325l54.579-129.399c0.062,0.076,0.108,0.163,0.137,0.256 l54.016,129.075c2.329,5.573,7.431,9.5,13.414,10.325l136.841,19.695L341.01,285.012z"></path>
-										</svg>
-										<label class="product__btn-red" for="favorite">Голосовать</label>
+										<label for="favorite">
+											<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 477.899 477.899">
+												<path d="M469.11,170.122c-5.462-6.13-12.926-10.117-21.058-11.249v-0.017l-127.01-17.545L270.781,21.213 c-7.339-17.579-27.539-25.88-45.117-18.541c-8.38,3.499-15.043,10.161-18.541,18.541l-50.261,120.098l-127.01,17.545 c-18.923,2.634-32.128,20.111-29.494,39.034c1.132,8.132,5.119,15.596,11.249,21.058l95.693,85.333L87.638,438.185 c-2.13,13.597,4.115,27.144,15.838,34.355c11.558,7.391,26.425,7.115,37.7-0.7l97.775-66.492l97.775,66.56 c15.777,10.708,37.248,6.599,47.957-9.178c4.866-7.17,6.859-15.907,5.582-24.477l-19.661-133.956l95.693-85.333 C480.561,206.254,481.821,184.386,469.11,170.122z M341.01,285.012c-4.281,3.825-6.352,9.545-5.513,15.224l20.48,143.36 l-107.383-73.011c-5.789-3.934-13.394-3.934-19.183,0l-108.015,72.567l21.009-142.984c0.816-5.656-1.254-11.345-5.513-15.155 l-102.4-92.297l136.67-18.859c5.984-0.825,11.085-4.752,13.414-10.325l54.579-129.399c0.062,0.076,0.108,0.163,0.137,0.256 l54.016,129.075c2.329,5.573,7.431,9.5,13.414,10.325l136.841,19.695L341.01,285.012z"></path>
+											</svg>
+										</label>
+									</div>
+									<div class="product__choose">
+										<input id="choose" type="checkbox">
+										<label class="product__btn-red" for="choose">Голосовать</label>
 									</div>
 								</div>
 								<ul class="product__list"> 
@@ -162,7 +169,22 @@
 					<!--	/product-->
 					<!-- product-block-->
 					<div class="product-block">
-						<div class="product-block__icons"> <a class="product-block__icon" href="#"><img src="img/001_idea.png" alt=""></a><a class="product-block__icon" href="#"><img src="img/002_mvp.png" alt=""></a><a class="product-block__icon" href="#"><img src="img/003_biz.png" alt=""></a></div>
+						<div class="product-block__icons"> <a class="product-block__icon tooltip" href="#" data-tooltip-content="#tooltip_1"><img src="img/001_idea.png" alt="">
+								<div class="tooltip_templates">
+									<div id="tooltip_1">
+										<p>Подсказка</p>
+									</div>
+								</div></a><a class="product-block__icon tooltip" href="#" data-tooltip-content="#tooltip_2"><img src="img/002_mvp.png" alt="">
+								<div class="tooltip_templates">
+									<div id="tooltip_2">
+										<p>Подсказка</p>
+									</div>
+								</div></a><a class="product-block__icon tooltip" href="#" data-tooltip-content="#tooltip_3"><img src="img/003_biz.png" alt="">
+								<div class="tooltip_templates">
+									<div id="tooltip_3">
+										<p>Подсказка</p>
+									</div>
+								</div></a></div>
 						<div class="product-block__location"> <span>Локация: </span><a href="#">Сочи</a></div>
 						<div class="product-block__quest"> 
 							<p><a href="#">* Как проинвестировать этот проект?</a></p>
@@ -249,7 +271,7 @@
 					<div class="footer__bottom">
 						<div class="footer__paysistems"> <img class="footer__robo" src="img/robokassa.png" alt=""><img class="footer__pays" src="img/paysistems.png" alt=""></div>
 						<div class="footer__row footer__row--align-center">
-							<div class="footer__col"><a class="footer__logo" href="#"> <img src="img/logo_2.jpg" alt=""></a></div>
+							<div class="footer__col"><a class="footer__logo" href="#"> <img src="img/logo_2.png" alt=""></a></div>
 							<div class="footer__col footer__col--center">
 								<p><a href="#">Соглашение по обрабоке персональных данных</a></p>
 								<p><a href="#">Положение о конкурсе "Международная битва проектов"</a></p>
@@ -268,6 +290,7 @@
 		</div>
 		<script src="js/libs/jquery.min.js"></script>
 		<script src="js/libs/slick.min.js"></script>
+		<script src="js/libs/tooltipster.bundle.min.js"> </script>
 		<script src="js/scripts.js"></script>
 	</body>
 </html>

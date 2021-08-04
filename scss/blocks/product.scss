@@ -68,20 +68,30 @@
   &__favorite {
     display: flex;
     align-items: center;
-    svg {
-      width: 38px;
-      margin-right: 20px;
-      fill: #8F8888;
-      transition: 0.2s;
+    label {
+      user-select: none;
+      cursor: pointer;
+      svg {
+        width: 38px;
+        fill: #8F8888;
+        transition: 0.2s;
+      }
     }
     input {
       display: none;
       &:checked {
-        + svg {
-          fill: $red;
-          animation: favorite 0.2s ease;
+        + label {
+          svg {
+            fill: $red;
+            animation: favorite 0.2s ease;
+          }
         }
       }
+    }
+  }
+  &__choose {
+    input {
+      display: none;
     }
   }
   &__btn-red {
@@ -188,10 +198,14 @@
     }
     &:hover {
       color: $red;
+      .product__icon {
+        transform: scale(1.1);
+      }
     }
   }
   &__icon {
     width: 55px;
+    transition: 0.2s;
   }
   &__footer {
     display: flex;
@@ -261,6 +275,20 @@
   @media (max-width: $break_sm) {
     &__btn-blue {
       margin: 15px 0;
+    }
+  }
+  @media (max-width: $break_xs) {
+    &__footer {
+      justify-content: center;
+    }
+    &__percent {
+      margin-left: 10px;
+    }
+    &__head {
+      justify-content: center;
+    }
+    &__favorite {
+      margin-left: 10px;
     }
   }
 }
