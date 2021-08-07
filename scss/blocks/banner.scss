@@ -2,17 +2,22 @@
   padding: 80px 0;
   font-weight: bold;
   text-transform: uppercase;
-  background-image: url(../img/banner.jpg);
-  background-color: #ccc;
+  background-color: #0051B6;
   color: #fff;
   background-size: cover;
   &__content {
     max-width: 970px;
     margin-left: auto;
+    &--left {
+      margin-left: 0;
+    }
   }
   &__title {
     font-size: 44px;
     margin-bottom: 5px;
+    &--small {
+      font-size: 32px;
+    }
   }
   &__text {
     font-size: 20px;
@@ -27,6 +32,14 @@
     }
     &__text {
       font-size: 18px;
+    }
+  }
+  @media (max-width: $break_xs) {
+    &__title {
+      font-size: 20px;
+    }
+    &__text {
+      font-size: 16px;
     }
   }
 }

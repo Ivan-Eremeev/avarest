@@ -31,4 +31,8 @@
       }
     }
   }
+  @media (max-width: $break_xs) {
+    padding: 20px 0;
+    font-size: 10px;
+  }
 }

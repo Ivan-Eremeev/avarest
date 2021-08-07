@@ -1,7 +1,8 @@
-// banner
-.banner
-  .wrapper
-    .banner__content 
-      .banner__title Наши вебинары
-      .banner__text Программа обучения для начала карьеры и повышения своего уровня!
-// /banner
+mixin banner(title, text, img)
+  // banner
+  .banner(style= img)
+    .wrapper
+      .banner__content 
+        .banner__title= title
+        .banner__text= text
+  // /banner
