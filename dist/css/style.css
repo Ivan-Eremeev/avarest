@@ -2110,7 +2110,7 @@ body {
 }
 @media (max-width: 500px) {
   .new {
-    padding: 10px 10px 20px;
+    padding: 10px 10px 30px;
   }
   .new__text h1 {
     font-size: 14px;
