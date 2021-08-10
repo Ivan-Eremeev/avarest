@@ -75,9 +75,14 @@
     }
   }
   .btn {
-    padding: 15px 20px;
+    padding: 15px 30px;
   }
   &:hover {
     box-shadow: 0 10px 10px rgba(0,0,0,.1);
+  }
+  @media (max-width: $break_xs) {
+    &__content {
+      align-items: center;
+    }
   }
 }

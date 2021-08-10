@@ -8,6 +8,7 @@
     @include col-xs(12);
   }
   &__item {
+    display: block;
     height: 100%;
     min-height: 300px;
     position: relative;

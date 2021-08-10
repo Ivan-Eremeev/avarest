@@ -1178,7 +1178,7 @@ body {
 }
 
 .card .btn {
-  padding: 15px 20px;
+  padding: 15px 30px;
 }
 
 .card:hover {
@@ -2337,6 +2337,7 @@ body {
 }
 
 .faq__item {
+  display: block;
   height: 100%;
   min-height: 300px;
   position: relative;
@@ -3039,7 +3040,7 @@ body {
   }
 
   .welcome__text {
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 20px;
   }
 
@@ -3127,6 +3128,12 @@ body {
     font-size: 10px;
   }
 
+  .card__content {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
   .banner__title {
     font-size: 20px;
   }
@@ -3211,6 +3218,14 @@ body {
   .news-page__text p {
     font-size: 14px;
     margin-bottom: 10px;
+  }
+
+  .welcome__title {
+    font-size: 20px;
+  }
+
+  .welcome__text {
+    font-size: 12px;
   }
 
   .welcome__arrows {
