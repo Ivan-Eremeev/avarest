@@ -1187,6 +1187,7 @@ body {
 }
 
 .banner {
+  display: block;
   padding: 80px 0;
   font-weight: bold;
   background-color: #0051B6;
@@ -3244,8 +3245,16 @@ body {
     height: 10px;
   }
 
+  .faq__content {
+    padding: 70px 15px 70px 15px;
+  }
+
   .faq__item {
     min-height: 200px;
+  }
+
+  .faq__text {
+    font-size: 12px;
   }
 
   .newsblock {

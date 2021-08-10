@@ -57,8 +57,14 @@
     }
   }
   @media (max-width: $break_xs) {
+    &__content {
+      padding: 70px 15px 70px 15px;
+    }
     &__item {
       min-height: 200px;
+    }
+    &__text {
+      font-size: 12px;
     }
   }
 }
