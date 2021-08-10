@@ -39,9 +39,10 @@
   @media (max-width: $break_xs) {
     &__title {
       font-size: 20px;
+      margin-bottom: 10px;
     }
     &__text {
-      font-size: 16px;
+      font-size: 12px;
     }
   }
 }
