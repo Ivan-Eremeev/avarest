@@ -29,6 +29,7 @@
 				left: 0;
 				bottom: -10px;
 				opacity: 0;
+				visibility: hidden;
 				transition: 0.3s;
 			}
 			&:hover {
@@ -36,6 +37,7 @@
 				&:after {
 					opacity: 1;
 					bottom: 0;
+					visibility: visible;
 				}
 			}
 		}

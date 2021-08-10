@@ -1,0 +1,177 @@
+extends blocks/base.pug
+
+block title 
+	title Главная
+
+block style-libs
+	link(rel="stylesheet", href="css/libs/slick.css")
+
+block content
+
+	include blocks/new.pug
+	include blocks/new-little.pug
+	include blocks/card.pug
+
+	.page
+
+		include blocks/header.pug
+		
+		.content
+			// welcome
+			.welcome
+				.welcome__slider
+					#welcomeSlider
+						.welcome__slide
+							img(src="img/welcome.jpg", alt="").welcome__img
+							.wrapper
+								.welcome__content 
+									.welcome__title МЕЖДУНАРОДНАЯ БИТВА ПРОЕКТОВ
+									.welcome__text Презентуй свой проект и найди инвестиции, Голосуй за участников и получай подарки, Инвестируй в бизнес и стань совладельцем.
+									.welcome__footer
+										a(href="#").welcome__btn ПОДРОБНЕЕ
+										.welcome__arrows
+											.welcome__arrow.welcome__arrow--prev
+											.welcome__arrow.welcome__arrow--next
+						.welcome__slide
+							img(src="img/welcome.jpg", alt="").welcome__img
+							.wrapper
+								.welcome__content 
+									.welcome__title МЕЖДУНАРОДНАЯ БИТВА ПРОЕКТОВ
+									.welcome__text Презентуй свой проект и найди инвестиции, Голосуй за участников и получай подарки, Инвестируй в бизнес и стань совладельцем.
+									.welcome__footer
+										a(href="#").welcome__btn ПОДРОБНЕЕ
+										.welcome__arrows
+											.welcome__arrow.welcome__arrow--prev
+											.welcome__arrow.welcome__arrow--next
+			//	/welcome
+
+			// faq
+			.faq
+				.row 
+					.faq__col 
+						.faq__item
+							.faq__content
+								.faq__title КУДА ВЛОЖИТЬ ДЕНЬГИ?
+								.faq__text Програмы для инвестирования
+							img(src="img/faq_1.jpg", alt="").faq__img
+					.faq__col 
+						.faq__item
+							.faq__content
+								.faq__title КАК СТАТЬ ИНВЕСТОРОМ?
+								.faq__text Он-лайн курсы для начинающих инвесторов
+							img(src="img/faq_2.jpg", alt="").faq__img
+					.faq__col 
+						.faq__item
+							.faq__content
+								.faq__title КАКИЕ ПОДАРКИ ЕСТЬ У АВАРЕСТ?
+								.faq__text Бизнес сувениры, которые приносят реальный доход.
+							img(src="img/faq_3.jpg", alt="").faq__img
+					.faq__col 
+						.faq__item
+							.faq__content
+								.faq__title КАК ОТКРЫТЬ БИЗНЕС С АВАРЕСТ?
+								.faq__text Покупай франшизу и будь первым в своем регионе.
+							img(src="img/faq_4.jpg", alt="").faq__img
+			//	/faq
+
+			// banner
+			.banner(style="background-image: url(img/banner_3.jpg)")
+				.wrapper
+					.banner__content.banner__content--left
+						.banner__title.banner__title--small ДИАЛОГ С АДВОКАТОМ
+						.banner__text Почему Аварест не пирамида, а уникальный <br>проект в сфере коллективных инвестиций?
+			// /banner
+
+			// newsblock
+			.newsblock
+				.wrapper 
+					.newsblock__head 
+						.newsblock__title НАШИ НОВОСТИ
+						a(href="#").newsblock__link Все новости
+					.row 
+						.newsblock__col.newsblock__col--1
+							// new
+							article.new.new--no-border
+								a(href="#").new__img.img-responsive
+									img(src="img/news_thumb.jpg", alt="")
+								.new__content 
+									.new__date 06.08.2021
+									.new__text 
+										h1 14 представительств в РФ и СНГ
+										p К проекту Аварест присоединяются партнеры. К проекту Аварест присоединяются партнеры. К проекту Аварест присоединяются партнеры. К проекту Аварест присоединяются партнеры. 
+									.new__more
+										a(href="#") Подробнее...&#62;&#62;
+							//	/new
+						.newsblock__col.newsblock__col--2
+							+new-little
+							+new-little
+							+new-little
+			//	/newsblock
+
+			// numbers
+			.numbers
+				.wrapper
+					.row
+						.numbers__col 
+							.numbers__title.count-number(data-val-up="0" data-val-to="7" data-duration="1500") 7
+							.numbers__text СТРАН
+						.numbers__col 
+							.numbers__title.count-number(data-val-up="0" data-val-to="14" data-duration="1500") 14
+							.numbers__text ПРЕДСТАВИТЕЛЕЙ
+						.numbers__col 
+							.numbers__title.count-number(data-val-up="0" data-val-to="16" data-duration="1500") 16
+							.numbers__text ПАРТНЕРОВ
+						.numbers__col 
+							.numbers__title 
+								span.count-number(data-val-up="0" data-val-to="25" data-duration="1500") 25
+								| +
+							.numbers__text ИНВЕСТИЦИОННЫХ ПРОГРАММ
+			//	/numbers
+
+			// about
+			.about
+				.wrapper 
+					.newsblock__head 
+						.newsblock__title О ПЛАТФОРМЕ АВАРЕСТ
+					.about__row 
+						.about__col.about__col--1
+							ul.about__list 
+								li Управляй из любой точки мира в один клик
+								li Получи 5 инструментов для снижения инвестиционных рисков
+								li Законность и юридическое сопровождение
+								li Инвестируй вместе с сообществом экспертов, инвесторов и бизнесменов
+						.about__col.about__col--2
+							.about__video.img-responsive
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/IL-tI7bpNT8?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			//	/about
+
+			// projects
+			.projects
+				.wrapper
+					.newsblock__head 
+						.newsblock__title ЛЕНТА ИНВЕСТИЦИОННЫХ ПРОЕКТОВ
+						a(href="#").newsblock__link Все проекты
+					.row 
+						.projects__col
+							+card('favorite_1')
+						.projects__col
+							+card('favorite_2')
+						.projects__col
+							+card('favorite_3')
+						.projects__col
+							+card('favorite_4')
+			//	/projects
+			
+			// banner
+			.banner(style="background-image: url(img/banner_2.jpg)")
+				.wrapper
+					.banner__content.banner__content--left
+						.banner__title.banner__title--small ВИДЕО О ПРОЕКТЕ АВАРЕСТ
+						.banner__text Презентационные ролики, интервью, отзывы партнеров.
+			// /banner
+
+		include blocks/footer.pug
+
+block js-libs
+	script(src="js/libs/jquery.min.js")
+	script(src="js/libs/slick.min.js") 

@@ -1,0 +1,93 @@
+.about {
+  padding: 30px 0 0;
+  .newsblock__head {
+    margin-bottom: 60px;
+  }
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  &__col {
+    &--1 {
+      width: 54%;
+      padding-right: 30px;
+    }
+    &--2 {
+      width: 46%;
+    }
+  }
+  &__list {
+    font-size: 25px;
+    font-weight: bold;
+    color: #4f4e4e;
+    li {
+      margin-bottom: 30px;
+      position: relative;
+      padding-left: 65px;
+      &:after {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 43px;
+        background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Слой_2' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 494 427' xml:space='preserve' fill='%23FF6702'%3E%3Cpath d='M131.5,268.5c0,0,90-98,139-142s118-89,150-103s72-26,73-19s-61,49-79,66s-99,91-149,151s-81,108-97,133s-26,41-30,48 s-11,23-18,24s-13-9-16-18s-22-63-34-93s-30-71-41-80s-29-13-29-13s7-21,24-30s41-9,60,4S131.5,268.5,131.5,268.5z'/%3E%3C/svg%3E%0A");
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+  &__video {
+    iframe {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+  @media (max-width: $break_md) {
+    &__col {
+      margin-bottom: 30px;
+      &--1 {
+        width: 100%;
+      }
+      &--2 {
+        width: 100%;
+      }
+    }
+  }
+  @media (max-width: $break_sm) {
+    .newsblock__head {
+      margin-bottom: 30px;
+    }
+    &__list {
+      font-size: 18px;
+      li {
+        padding-left: 45px;
+        margin-bottom: 20px;
+        &:after {
+          width: 33px;
+          height: 29px;
+        }
+      }
+    }
+  }
+  @media (max-width: $break_xs) {
+    &__col {
+      margin-bottom: 20px;
+    }
+    &__list {
+      font-size: 14px;
+      li {
+        padding-left: 25px;
+        &:after {
+          width: 20px;
+          height: 17px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+.numbers {
+  padding: 60px 0 30px;
+  background-color: #008389;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  &__col {
+    @include col(3);
+    @include col-xs(12);
+    margin-bottom: 30px;
+  }
+  &__title {
+    font-size: 62px;
+    font-weight: bold;
+  }
+  &__text {
+    font-size: 24px;
+    font-weight: 600;
+  }
+  @media (max-width: $break_md) {
+    &__title {
+      font-size: 40px;
+    }
+    &__text {
+      font-size: 20px;
+    }
+  }
+  @media (max-width: $break_sm) {
+    &__title {
+      font-size: 30px;
+    }
+    &__text {
+      font-size: 16px;
+    }
+  }
+  @media (max-width: $break_xs) {
+    &__title {
+      max-width: 200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &__text {
+      max-width: 200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

@@ -33,3 +33,28 @@ function slider(slider,sliderFor) {
   }
 }
 slider($('.product__slider-for'), $('.product__slider-nav'));
+
+function sliderWelcome(slider) {
+  if (slider.length) {
+    slider.slick({
+      slidesToShow: 1, // Сколько слайдов показывать на экране
+      slidesToScroll: 1, // Сколько слайдов пролистывать за раз
+      fade: true,
+      dots: false, // Пагинация
+      arrows: false, // Стрелки
+      infinite: true, // Зацикленное пролистывание
+      swipe: true, // Перелистывание пальцем
+      draggable: true, // Перелистывание мышью
+      pauseOnHover: true,
+      autoplay: true,
+      speed: 2000,
+    });
+    $('.welcome__arrow--prev').on('click', function () {
+      slider.slick('slickPrev');
+    });
+    $('.welcome__arrow--next').on('click', function () {
+      slider.slick('slickNext');
+    });
+  }
+}
+sliderWelcome($('#welcomeSlider'));

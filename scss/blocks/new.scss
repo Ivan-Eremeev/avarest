@@ -28,6 +28,7 @@
   &__text {
     line-height: 1.5;
     flex-grow: 1;
+    font-weight: 500;
     h1 {
       font-size: 16px;
       margin-bottom: 10px;
@@ -40,6 +41,15 @@
     text-align: right;
     font-style: italic;
     margin-top: 10px;
+    a {
+      color: #565657;
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+  &--no-border {
+    border: none;
   }
   @media (max-width: $break_xs) {
     padding: 10px 10px 30px;

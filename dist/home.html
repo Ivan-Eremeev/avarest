@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<title>Главная</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<link rel="stylesheet" href="css/libs/slick.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div class="page">
+			<!-- header-->
+			<header class="header">
+				<div class="header__top"> 
+					<div class="wrapper">
+						<div class="header__location modal-trigger" data-modal="#modal-1"><svg enable-background="new 0 0 512 512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><g><path d="m407.579 87.677c-31.073-53.624-86.265-86.385-147.64-87.637-2.62-.054-5.257-.054-7.878 0-61.374 1.252-116.566 34.013-147.64 87.637-31.762 54.812-32.631 120.652-2.325 176.123l126.963 232.387c.057.103.114.206.173.308 5.586 9.709 15.593 15.505 26.77 15.505 11.176 0 21.183-5.797 26.768-15.505.059-.102.116-.205.173-.308l126.963-232.387c30.304-55.471 29.435-121.311-2.327-176.123zm-151.579 144.323c-39.701 0-72-32.299-72-72s32.299-72 72-72 72 32.299 72 72-32.298 72-72 72z"/></g></svg><span>Ваш город - Москва</span><span class="header__location-span">(изменить)</span></div>
+						<ul class="header__user"> 
+							<li><a href="#">Регистрация </a></li>
+							<li><a href="#">Личный кабинет </a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="header__center">
+					<div class="wrapper"><a class="header__logo" href="#"> <img src="img/logo.png" alt=""></a>
+						<!-- connect-->
+						<div class="connect mobile-hide">
+							<div class="connect__row"><a class="connect__tel connect__tel--big" href="tel:+78005519588">+7 (800) 551 95 88</a></div>
+							<div class="connect__row connect__row--flex"><a class="connect__tel connect__tel--small" href="tel:+79206629630">+7 920-662-96-30</a>
+								<div class="connect__social"> <a class="connect__icon connect__icon--whatsapp" href="#"><img src="img/whatsapp.svg" alt=""></a><a class="connect__icon connect__icon--telegram" href="#"><img src="img/telegram.svg" alt=""></a><a class="connect__icon connect__icon--viber" href="#"><img src="img/viber.svg" alt=""></a></div>
+							</div>
+						</div>
+						<!--	/connect-->
+						<div class="header__hamburger hamburger hamburger--squeeze js-drop-btn" data-drop="menu">
+							<div class="hamburger-box">
+								<div class="hamburger-inner"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="header__bottom">
+					<div class="wrapper">
+						<!-- menu-->
+						<div class="js-drop menu menu--left" id="menu">
+							<nav class="menu__nav">
+								<!-- search-->
+								<div class="search mobile-visible">
+									<input class="search__input" id="search" type="text">
+									<label class="search__label" for="search">
+										 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-1 0 136 136.21852">
+<path d="M 93.148438 80.832031 C 109.5 57.742188 104.03125 25.769531 80.941406 9.421875 C 57.851562 -6.925781 25.878906 -1.460938 9.53125 21.632812 C -6.816406 44.722656 -1.351562 76.691406 21.742188 93.039062 C 38.222656 104.707031 60.011719 105.605469 77.394531 95.339844 L 115.164062 132.882812 C 119.242188 137.175781 126.027344 137.347656 130.320312 133.269531 C 134.613281 129.195312 134.785156 122.410156 130.710938 118.117188 C 130.582031 117.980469 130.457031 117.855469 130.320312 117.726562 Z M 51.308594 84.332031 C 33.0625 84.335938 18.269531 69.554688 18.257812 51.308594 C 18.253906 33.0625 33.035156 18.269531 51.285156 18.261719 C 69.507812 18.253906 84.292969 33.011719 84.328125 51.234375 C 84.359375 69.484375 69.585938 84.300781 51.332031 84.332031 C 51.324219 84.332031 51.320312 84.332031 51.308594 84.332031 Z M 51.308594 84.332031"/>
+</svg>
+									</label>
+								</div>
+								<!--	/search-->
+								<ul class="menu__list">
+									<li><a href="#">Главная</a></li>
+									<li><a href="#">Каталог проектов</a></li>
+									<li><a href="#">Новости</a></li>
+									<li><a href="#">Рейтинг</a></li>
+									<li><a href="#">О битве</a></li>
+								</ul>
+								<!-- connect-->
+								<div class="connect mobile-visible">
+									<div class="connect__row"><a class="connect__tel connect__tel--big" href="tel:+78005519588">+7 (800) 551 95 88</a></div>
+									<div class="connect__row connect__row--flex"><a class="connect__tel connect__tel--small" href="tel:+79206629630">+7 920-662-96-30</a>
+										<div class="connect__social"> <a class="connect__icon connect__icon--whatsapp" href="#"><img src="img/whatsapp.svg" alt=""></a><a class="connect__icon connect__icon--telegram" href="#"><img src="img/telegram.svg" alt=""></a><a class="connect__icon connect__icon--viber" href="#"><img src="img/viber.svg" alt=""></a></div>
+									</div>
+								</div>
+								<!--	/connect--><a class="header__location mobile-visible modal-trigger" href="#" data-modal="#modal-1"><svg enable-background="new 0 0 512 512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><g><path d="m407.579 87.677c-31.073-53.624-86.265-86.385-147.64-87.637-2.62-.054-5.257-.054-7.878 0-61.374 1.252-116.566 34.013-147.64 87.637-31.762 54.812-32.631 120.652-2.325 176.123l126.963 232.387c.057.103.114.206.173.308 5.586 9.709 15.593 15.505 26.77 15.505 11.176 0 21.183-5.797 26.768-15.505.059-.102.116-.205.173-.308l126.963-232.387c30.304-55.471 29.435-121.311-2.327-176.123zm-151.579 144.323c-39.701 0-72-32.299-72-72s32.299-72 72-72 72 32.299 72 72-32.298 72-72 72z"/></g></svg><span>Ваш город - Москва</span><span class="header__location-span">(изменить)</span></a>
+								<ul class="header__user mobile-visible">
+									<li><a href="#">Регистрация </a></li>
+									<li><a href="#">Личный кабинет </a></li>
+								</ul>
+							</nav>
+						</div>
+						<!-- /menu-->
+						<!-- search-->
+						<div class="search mobile-hide">
+							<input class="search__input" id="search_mob" type="text">
+							<label class="search__label" for="search_mob">
+								 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-1 0 136 136.21852">
+<path d="M 93.148438 80.832031 C 109.5 57.742188 104.03125 25.769531 80.941406 9.421875 C 57.851562 -6.925781 25.878906 -1.460938 9.53125 21.632812 C -6.816406 44.722656 -1.351562 76.691406 21.742188 93.039062 C 38.222656 104.707031 60.011719 105.605469 77.394531 95.339844 L 115.164062 132.882812 C 119.242188 137.175781 126.027344 137.347656 130.320312 133.269531 C 134.613281 129.195312 134.785156 122.410156 130.710938 118.117188 C 130.582031 117.980469 130.457031 117.855469 130.320312 117.726562 Z M 51.308594 84.332031 C 33.0625 84.335938 18.269531 69.554688 18.257812 51.308594 C 18.253906 33.0625 33.035156 18.269531 51.285156 18.261719 C 69.507812 18.253906 84.292969 33.011719 84.328125 51.234375 C 84.359375 69.484375 69.585938 84.300781 51.332031 84.332031 C 51.324219 84.332031 51.320312 84.332031 51.308594 84.332031 Z M 51.308594 84.332031"/>
+</svg>
+							</label>
+						</div>
+						<!--	/search-->
+						<!-- modal-->
+						<div class="modal" id="modal-1">
+							<div class="modal_body">
+								<form class="modal_content" action="#">
+									<div class="modal__head"> 
+										<div class="modal__title">Ваш город:</div>
+										<div class="modal__city">Москва</div>
+										<div class="modal_close js-modal_close"></div>
+									</div>
+									<div class="modal__main"> 
+										<div class="modal__text">Новый город доставки:</div>
+										<div class="modal__input"> 
+											<input type="text" placeholder="Укажите город">
+										</div>
+									</div>
+									<div class="modal__footer"> 
+										<button class="modal__btn modal__btn--blue" type="submit">Сохранить</button>
+										<div class="modal__btn modal__btn--white js-modal_close">Отменить</div>
+									</div>
+								</form>
+							</div>
+						</div>
+						<!-- /modal-->
+					</div>
+				</div>
+			</header>
+			<!-- /header-->
+			<div class="content">
+				<!-- welcome-->
+				<div class="welcome">
+					<div class="welcome__slider">
+						<div id="welcomeSlider">
+							<div class="welcome__slide"><img class="welcome__img" src="img/welcome.jpg" alt="">
+								<div class="wrapper">
+									<div class="welcome__content"> 
+										<div class="welcome__title">МЕЖДУНАРОДНАЯ БИТВА ПРОЕКТОВ</div>
+										<div class="welcome__text">Презентуй свой проект и найди инвестиции, Голосуй за участников и получай подарки, Инвестируй в бизнес и стань совладельцем.</div>
+										<div class="welcome__footer"><a class="welcome__btn" href="#">ПОДРОБНЕЕ</a>
+											<div class="welcome__arrows">
+												<div class="welcome__arrow welcome__arrow--prev"></div>
+												<div class="welcome__arrow welcome__arrow--next"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="welcome__slide"><img class="welcome__img" src="img/welcome.jpg" alt="">
+								<div class="wrapper">
+									<div class="welcome__content"> 
+										<div class="welcome__title">МЕЖДУНАРОДНАЯ БИТВА ПРОЕКТОВ</div>
+										<div class="welcome__text">Презентуй свой проект и найди инвестиции, Голосуй за участников и получай подарки, Инвестируй в бизнес и стань совладельцем.</div>
+										<div class="welcome__footer"><a class="welcome__btn" href="#">ПОДРОБНЕЕ</a>
+											<div class="welcome__arrows">
+												<div class="welcome__arrow welcome__arrow--prev"></div>
+												<div class="welcome__arrow welcome__arrow--next"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--	/welcome-->
+				<!-- faq-->
+				<div class="faq">
+					<div class="row"> 
+						<div class="faq__col"> 
+							<div class="faq__item">
+								<div class="faq__content">
+									<div class="faq__title">КУДА ВЛОЖИТЬ ДЕНЬГИ?</div>
+									<div class="faq__text">Програмы для инвестирования</div>
+								</div><img class="faq__img" src="img/faq_1.jpg" alt="">
+							</div>
+						</div>
+						<div class="faq__col"> 
+							<div class="faq__item">
+								<div class="faq__content">
+									<div class="faq__title">КАК СТАТЬ ИНВЕСТОРОМ?</div>
+									<div class="faq__text">Он-лайн курсы для начинающих инвесторов</div>
+								</div><img class="faq__img" src="img/faq_2.jpg" alt="">
+							</div>
+						</div>
+						<div class="faq__col"> 
+							<div class="faq__item">
+								<div class="faq__content">
+									<div class="faq__title">КАКИЕ ПОДАРКИ ЕСТЬ У АВАРЕСТ?</div>
+									<div class="faq__text">Бизнес сувениры, которые приносят реальный доход.</div>
+								</div><img class="faq__img" src="img/faq_3.jpg" alt="">
+							</div>
+						</div>
+						<div class="faq__col"> 
+							<div class="faq__item">
+								<div class="faq__content">
+									<div class="faq__title">КАК ОТКРЫТЬ БИЗНЕС С АВАРЕСТ?</div>
+									<div class="faq__text">Покупай франшизу и будь первым в своем регионе.</div>
+								</div><img class="faq__img" src="img/faq_4.jpg" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--	/faq-->
+				<!-- banner-->
+				<div class="banner" style="background-image: url(img/banner_3.jpg)">
+					<div class="wrapper">
+						<div class="banner__content banner__content--left">
+							<div class="banner__title banner__title--small">ДИАЛОГ С АДВОКАТОМ</div>
+							<div class="banner__text">Почему Аварест не пирамида, а уникальный <br>проект в сфере коллективных инвестиций?</div>
+						</div>
+					</div>
+				</div>
+				<!-- /banner-->
+				<!-- newsblock-->
+				<div class="newsblock">
+					<div class="wrapper"> 
+						<div class="newsblock__head"> 
+							<div class="newsblock__title">НАШИ НОВОСТИ</div><a class="newsblock__link" href="#">Все новости</a>
+						</div>
+						<div class="row"> 
+							<div class="newsblock__col newsblock__col--1">
+								<!-- new-->
+								<article class="new new--no-border"><a class="new__img img-responsive" href="#"><img src="img/news_thumb.jpg" alt=""></a>
+									<div class="new__content"> 
+										<div class="new__date">06.08.2021</div>
+										<div class="new__text"> 
+											<h1>14 представительств в РФ и СНГ</h1>
+											<p>К проекту Аварест присоединяются партнеры. К проекту Аварест присоединяются партнеры. К проекту Аварест присоединяются партнеры. К проекту Аварест присоединяются партнеры. </p>
+										</div>
+										<div class="new__more"><a href="#">Подробнее...&#62;&#62;</a></div>
+									</div>
+								</article>
+								<!--	/new-->
+							</div>
+							<div class="newsblock__col newsblock__col--2">
+										<!-- new-little-->
+										<article class="new-little"><a href="#">
+												<div class="new-little__head"> 
+													<h1 class="new-little__title">14 представительств в РФ и СНГ</h1>
+													<div class="new-little__date">06.08.2021</div>
+												</div>
+												<div class="new-little__row"> 
+													<div class="new-little__img"> <img src="img/news_thumb.jpg" alt=""></div>
+													<div class="new-little__text">К проекту Аварест присоединяются партнеры. К проекту Аварест присоединяются партнеры. К проекту Аварест присоединяются партнеры. К проекту Аварест присоединяются партнеры.</div>
+												</div></a></article>
+										<!--	/new-little-->
+										<!-- new-little-->
+										<article class="new-little"><a href="#">
+												<div class="new-little__head"> 
+													<h1 class="new-little__title">14 представительств в РФ и СНГ</h1>
+													<div class="new-little__date">06.08.2021</div>
+												</div>
+												<div class="new-little__row"> 
+													<div class="new-little__img"> <img src="img/news_thumb.jpg" alt=""></div>
+													<div class="new-little__text">К проекту Аварест присоединяются партнеры. К проекту Аварест присоединяются партнеры. К проекту Аварест присоединяются партнеры. К проекту Аварест присоединяются партнеры.</div>
+												</div></a></article>
+										<!--	/new-little-->
+										<!-- new-little-->
+										<article class="new-little"><a href="#">
+												<div class="new-little__head"> 
+													<h1 class="new-little__title">14 представительств в РФ и СНГ</h1>
+													<div class="new-little__date">06.08.2021</div>
+												</div>
+												<div class="new-little__row"> 
+													<div class="new-little__img"> <img src="img/news_thumb.jpg" alt=""></div>
+													<div class="new-little__text">К проекту Аварест присоединяются партнеры. К проекту Аварест присоединяются партнеры. К проекту Аварест присоединяются партнеры. К проекту Аварест присоединяются партнеры.</div>
+												</div></a></article>
+										<!--	/new-little-->
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--	/newsblock-->
+				<!-- numbers-->
+				<div class="numbers">
+					<div class="wrapper">
+						<div class="row">
+							<div class="numbers__col"> 
+								<div class="numbers__title count-number" data-val-up="0" data-val-to="7" data-duration="1500">7</div>
+								<div class="numbers__text">СТРАН</div>
+							</div>
+							<div class="numbers__col"> 
+								<div class="numbers__title count-number" data-val-up="0" data-val-to="14" data-duration="1500">14</div>
+								<div class="numbers__text">ПРЕДСТАВИТЕЛЕЙ</div>
+							</div>
+							<div class="numbers__col"> 
+								<div class="numbers__title count-number" data-val-up="0" data-val-to="16" data-duration="1500">16</div>
+								<div class="numbers__text">ПАРТНЕРОВ</div>
+							</div>
+							<div class="numbers__col"> 
+								<div class="numbers__title"> <span class="count-number" data-val-up="0" data-val-to="25" data-duration="1500">25</span>+</div>
+								<div class="numbers__text">ИНВЕСТИЦИОННЫХ ПРОГРАММ</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--	/numbers-->
+				<!-- about-->
+				<div class="about">
+					<div class="wrapper"> 
+						<div class="newsblock__head"> 
+							<div class="newsblock__title">О ПЛАТФОРМЕ АВАРЕСТ</div>
+						</div>
+						<div class="about__row"> 
+							<div class="about__col about__col--1">
+								<ul class="about__list"> 
+									<li>Управляй из любой точки мира в один клик</li>
+									<li>Получи 5 инструментов для снижения инвестиционных рисков</li>
+									<li>Законность и юридическое сопровождение</li>
+									<li>Инвестируй вместе с сообществом экспертов, инвесторов и бизнесменов</li>
+								</ul>
+							</div>
+							<div class="about__col about__col--2">
+								<div class="about__video img-responsive"><iframe width="560" height="315" src="https://www.youtube.com/embed/IL-tI7bpNT8?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--	/about-->
+				<!-- projects-->
+				<div class="projects">
+					<div class="wrapper">
+						<div class="newsblock__head"> 
+							<div class="newsblock__title">ЛЕНТА ИНВЕСТИЦИОННЫХ ПРОЕКТОВ</div><a class="newsblock__link" href="#">Все проекты</a>
+						</div>
+						<div class="row"> 
+							<div class="projects__col">
+										<!-- card-->
+										<form class="card" action="#">
+											<div class="card__img"> <a href="#"> <img src="img/product_1.jpg" alt=""></a>
+												<div class="card__favorite">
+													<input id="favorite_1" type="checkbox">
+													<label for="favorite_1"> 
+														<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 477.899 477.899">
+															<path d="M469.11,170.122c-5.462-6.13-12.926-10.117-21.058-11.249v-0.017l-127.01-17.545L270.781,21.213 c-7.339-17.579-27.539-25.88-45.117-18.541c-8.38,3.499-15.043,10.161-18.541,18.541l-50.261,120.098l-127.01,17.545 c-18.923,2.634-32.128,20.111-29.494,39.034c1.132,8.132,5.119,15.596,11.249,21.058l95.693,85.333L87.638,438.185 c-2.13,13.597,4.115,27.144,15.838,34.355c11.558,7.391,26.425,7.115,37.7-0.7l97.775-66.492l97.775,66.56 c15.777,10.708,37.248,6.599,47.957-9.178c4.866-7.17,6.859-15.907,5.582-24.477l-19.661-133.956l95.693-85.333 C480.561,206.254,481.821,184.386,469.11,170.122z M341.01,285.012c-4.281,3.825-6.352,9.545-5.513,15.224l20.48,143.36 l-107.383-73.011c-5.789-3.934-13.394-3.934-19.183,0l-108.015,72.567l21.009-142.984c0.816-5.656-1.254-11.345-5.513-15.155 l-102.4-92.297l136.67-18.859c5.984-0.825,11.085-4.752,13.414-10.325l54.579-129.399c0.062,0.076,0.108,0.163,0.137,0.256 l54.016,129.075c2.329,5.573,7.431,9.5,13.414,10.325l136.841,19.695L341.01,285.012z"></path>
+														</svg>
+													</label>
+												</div>
+											</div>
+											<div class="card__content"> 
+												<div class="card__text">
+													<div class="card__location">Московская обл</div><a class="card__name" href="#">Углерон-Life</a>
+												</div>
+												<div class="card__price"> <img src="img/001_idea.png" alt=""><span>750.00 &#8381;</span></div><a class="btn" href="#">Подробнее</a>
+											</div>
+										</form>
+										<!--	/card-->
+							</div>
+							<div class="projects__col">
+										<!-- card-->
+										<form class="card" action="#">
+											<div class="card__img"> <a href="#"> <img src="img/product_1.jpg" alt=""></a>
+												<div class="card__favorite">
+													<input id="favorite_2" type="checkbox">
+													<label for="favorite_2"> 
+														<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 477.899 477.899">
+															<path d="M469.11,170.122c-5.462-6.13-12.926-10.117-21.058-11.249v-0.017l-127.01-17.545L270.781,21.213 c-7.339-17.579-27.539-25.88-45.117-18.541c-8.38,3.499-15.043,10.161-18.541,18.541l-50.261,120.098l-127.01,17.545 c-18.923,2.634-32.128,20.111-29.494,39.034c1.132,8.132,5.119,15.596,11.249,21.058l95.693,85.333L87.638,438.185 c-2.13,13.597,4.115,27.144,15.838,34.355c11.558,7.391,26.425,7.115,37.7-0.7l97.775-66.492l97.775,66.56 c15.777,10.708,37.248,6.599,47.957-9.178c4.866-7.17,6.859-15.907,5.582-24.477l-19.661-133.956l95.693-85.333 C480.561,206.254,481.821,184.386,469.11,170.122z M341.01,285.012c-4.281,3.825-6.352,9.545-5.513,15.224l20.48,143.36 l-107.383-73.011c-5.789-3.934-13.394-3.934-19.183,0l-108.015,72.567l21.009-142.984c0.816-5.656-1.254-11.345-5.513-15.155 l-102.4-92.297l136.67-18.859c5.984-0.825,11.085-4.752,13.414-10.325l54.579-129.399c0.062,0.076,0.108,0.163,0.137,0.256 l54.016,129.075c2.329,5.573,7.431,9.5,13.414,10.325l136.841,19.695L341.01,285.012z"></path>
+														</svg>
+													</label>
+												</div>
+											</div>
+											<div class="card__content"> 
+												<div class="card__text">
+													<div class="card__location">Московская обл</div><a class="card__name" href="#">Углерон-Life</a>
+												</div>
+												<div class="card__price"> <img src="img/001_idea.png" alt=""><span>750.00 &#8381;</span></div><a class="btn" href="#">Подробнее</a>
+											</div>
+										</form>
+										<!--	/card-->
+							</div>
+							<div class="projects__col">
+										<!-- card-->
+										<form class="card" action="#">
+											<div class="card__img"> <a href="#"> <img src="img/product_1.jpg" alt=""></a>
+												<div class="card__favorite">
+													<input id="favorite_3" type="checkbox">
+													<label for="favorite_3"> 
+														<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 477.899 477.899">
+															<path d="M469.11,170.122c-5.462-6.13-12.926-10.117-21.058-11.249v-0.017l-127.01-17.545L270.781,21.213 c-7.339-17.579-27.539-25.88-45.117-18.541c-8.38,3.499-15.043,10.161-18.541,18.541l-50.261,120.098l-127.01,17.545 c-18.923,2.634-32.128,20.111-29.494,39.034c1.132,8.132,5.119,15.596,11.249,21.058l95.693,85.333L87.638,438.185 c-2.13,13.597,4.115,27.144,15.838,34.355c11.558,7.391,26.425,7.115,37.7-0.7l97.775-66.492l97.775,66.56 c15.777,10.708,37.248,6.599,47.957-9.178c4.866-7.17,6.859-15.907,5.582-24.477l-19.661-133.956l95.693-85.333 C480.561,206.254,481.821,184.386,469.11,170.122z M341.01,285.012c-4.281,3.825-6.352,9.545-5.513,15.224l20.48,143.36 l-107.383-73.011c-5.789-3.934-13.394-3.934-19.183,0l-108.015,72.567l21.009-142.984c0.816-5.656-1.254-11.345-5.513-15.155 l-102.4-92.297l136.67-18.859c5.984-0.825,11.085-4.752,13.414-10.325l54.579-129.399c0.062,0.076,0.108,0.163,0.137,0.256 l54.016,129.075c2.329,5.573,7.431,9.5,13.414,10.325l136.841,19.695L341.01,285.012z"></path>
+														</svg>
+													</label>
+												</div>
+											</div>
+											<div class="card__content"> 
+												<div class="card__text">
+													<div class="card__location">Московская обл</div><a class="card__name" href="#">Углерон-Life</a>
+												</div>
+												<div class="card__price"> <img src="img/001_idea.png" alt=""><span>750.00 &#8381;</span></div><a class="btn" href="#">Подробнее</a>
+											</div>
+										</form>
+										<!--	/card-->
+							</div>
+							<div class="projects__col">
+										<!-- card-->
+										<form class="card" action="#">
+											<div class="card__img"> <a href="#"> <img src="img/product_1.jpg" alt=""></a>
+												<div class="card__favorite">
+													<input id="favorite_4" type="checkbox">
+													<label for="favorite_4"> 
+														<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 477.899 477.899">
+															<path d="M469.11,170.122c-5.462-6.13-12.926-10.117-21.058-11.249v-0.017l-127.01-17.545L270.781,21.213 c-7.339-17.579-27.539-25.88-45.117-18.541c-8.38,3.499-15.043,10.161-18.541,18.541l-50.261,120.098l-127.01,17.545 c-18.923,2.634-32.128,20.111-29.494,39.034c1.132,8.132,5.119,15.596,11.249,21.058l95.693,85.333L87.638,438.185 c-2.13,13.597,4.115,27.144,15.838,34.355c11.558,7.391,26.425,7.115,37.7-0.7l97.775-66.492l97.775,66.56 c15.777,10.708,37.248,6.599,47.957-9.178c4.866-7.17,6.859-15.907,5.582-24.477l-19.661-133.956l95.693-85.333 C480.561,206.254,481.821,184.386,469.11,170.122z M341.01,285.012c-4.281,3.825-6.352,9.545-5.513,15.224l20.48,143.36 l-107.383-73.011c-5.789-3.934-13.394-3.934-19.183,0l-108.015,72.567l21.009-142.984c0.816-5.656-1.254-11.345-5.513-15.155 l-102.4-92.297l136.67-18.859c5.984-0.825,11.085-4.752,13.414-10.325l54.579-129.399c0.062,0.076,0.108,0.163,0.137,0.256 l54.016,129.075c2.329,5.573,7.431,9.5,13.414,10.325l136.841,19.695L341.01,285.012z"></path>
+														</svg>
+													</label>
+												</div>
+											</div>
+											<div class="card__content"> 
+												<div class="card__text">
+													<div class="card__location">Московская обл</div><a class="card__name" href="#">Углерон-Life</a>
+												</div>
+												<div class="card__price"> <img src="img/001_idea.png" alt=""><span>750.00 &#8381;</span></div><a class="btn" href="#">Подробнее</a>
+											</div>
+										</form>
+										<!--	/card-->
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--	/projects-->
+				<!-- banner-->
+				<div class="banner" style="background-image: url(img/banner_2.jpg)">
+					<div class="wrapper">
+						<div class="banner__content banner__content--left">
+							<div class="banner__title banner__title--small">ВИДЕО О ПРОЕКТЕ АВАРЕСТ</div>
+							<div class="banner__text">Презентационные ролики, интервью, отзывы партнеров.</div>
+						</div>
+					</div>
+				</div>
+				<!-- /banner-->
+			</div>
+			<!-- footer-->
+			<footer class="footer"> 
+				<div class="wrapper"> 
+					<div class="footer__top"> 
+						<div class="footer__row"> 
+							<div class="footer__col">
+								<ul class="footer__list">
+									<li> <a href="#">Каталог проектов</a></li>
+									<li> <a href="#">Сувениры</a></li>
+									<li> <a href="#">Курсы для инвесторов</a></li>
+									<li> <a href="#">Инвестиционные программы</a></li>
+									<li> <a href="#">Личный кабинет</a></li>
+									<li> <a href="#">Маркетплейс аварест</a></li>
+								</ul>
+							</div>
+							<div class="footer__col">
+								<div class="footer__requisites">
+									<p>МПК "Аварест"</p>
+									<p>125480, г.Москва, ул. Вилиса Лациса 6к1, оф 8</p>
+									<p>ИНН 9706003521, КПП 770601001</p>
+									<p>р/с 40703810338000015417</p>
+									<p>к/с 30101810400000000225</p>
+									<p>БИК 044525225</p>
+									<p>ПАО Сбербанк г. Москва</p>
+								</div>
+								<ul class="footer__links"> 
+									<li> <a href="https://avarest.ru">https://avarest.ru</a></li>
+									<li> <a href="mailto:info@avarest.ru">info@avarest.ru</a></li>
+								</ul>
+							</div>
+							<div class="footer__col footer__col--right"><a class="footer__tel" href="tel:+78005519588">+7 (800) 551 95 88</a>
+								<div class="footer__text">
+									<p> <span>* Для звонков из РФ</span><span>с 9-00 до 18-00 по будням</span></p>
+									<p> <span>САЙТ КОНКУРСА: <a href="#">findinvest.space</a></span><span>ВОПРОСЫ: <a href="mailto:findinvest@avarest.ru">findinvest@avarest.ru</a></span></p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="footer__bottom">
+						<div class="footer__paysistems"> <img class="footer__robo" src="img/robokassa.png" alt=""><img class="footer__pays" src="img/paysistems.png" alt=""></div>
+						<div class="footer__row footer__row--align-center">
+							<div class="footer__col"><a class="footer__logo" href="#"> <img src="img/logo_2.png" alt=""></a></div>
+							<div class="footer__col footer__col--center">
+								<p><a href="#">Соглашение по обрабоке персональных данных</a></p>
+								<p><a href="#">Положение о конкурсе "Международная битва проектов"</a></p>
+								<p>Copyright 2019-2021 Все права защищены</p>
+							</div>
+							<div class="footer__col footer__col--right">
+								<p><a href="#">Пользовательское Соглашение</a></p>
+								<p><a href="#">Политика конфиденциальности</a></p>
+								<p><a href="#">Политика обработки кук</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+			<!-- /footer-->
+		</div>
+		<script src="js/libs/jquery.min.js"></script>
+		<script src="js/libs/slick.min.js"> </script>
+		<script src="js/scripts.js"></script>
+	</body>
+</html>

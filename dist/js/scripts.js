@@ -47,11 +47,31 @@ $(document).ready(function () {
 	  }
 	}
 	slider($('.product__slider-for'), $('.product__slider-nav'));
-
-	// Запрет перехода по ссылкам с хэшем
-	// $('a[href="#"]').click(function(e) {
-	// 	e.preventDefault();
-	// });
+	
+	function sliderWelcome(slider) {
+	  if (slider.length) {
+	    slider.slick({
+	      slidesToShow: 1, // Сколько слайдов показывать на экране
+	      slidesToScroll: 1, // Сколько слайдов пролистывать за раз
+	      fade: true,
+	      dots: false, // Пагинация
+	      arrows: false, // Стрелки
+	      infinite: true, // Зацикленное пролистывание
+	      swipe: true, // Перелистывание пальцем
+	      draggable: true, // Перелистывание мышью
+	      pauseOnHover: true,
+	      autoplay: true,
+	      speed: 2000,
+	    });
+	    $('.welcome__arrow--prev').on('click', function () {
+	      slider.slick('slickPrev');
+	    });
+	    $('.welcome__arrow--next').on('click', function () {
+	      slider.slick('slickNext');
+	    });
+	  }
+	}
+	sliderWelcome($('#welcomeSlider'));
 
 	// Модальное окно
 	function modal() {
@@ -132,5 +152,37 @@ $(document).ready(function () {
 			theme: 'tooltipster-shadow',
 		});
 	}
+
+	// Анимация увеличения значения числа
+	function countNumber(block) {
+		block.each(function () {
+			var scrollTop = false,
+				countNumberStatus = true,
+				$this = $(this),
+				blockPosition = $this.position().top,
+				valUp = $this.data('val-up'),
+				valTo = $this.data('val-to'),
+				valDuration = $this.data('duration');
+			$this.html(0);
+      gofunc();
+			$(window).scroll(function () {
+        gofunc();
+			});
+      function gofunc() {
+        scrollTop = $(window).scrollTop() + $(window).height();
+        if (scrollTop > blockPosition && countNumberStatus) {
+          $({ numberValue: valUp }).animate({ numberValue: valTo }, {
+            duration: valDuration,
+            easing: "swing",
+            step: function (val) {
+              $this.html(Math.ceil(val));
+            }
+          });
+          countNumberStatus = false;
+        }
+      }
+		});
+	};
+	countNumber($(".count-number"));
 
 });
